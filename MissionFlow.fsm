@@ -5,7 +5,7 @@ item0[] = {"init",0,250,-40.348846,-149.418610,49.651154,-99.418610,0.000000,"in
 item1[] = {"SERVER_CHECK",4,218,-192.040344,-145.759003,-102.040337,-95.759003,0.000000,"SERVER" \n "CHECK"};
 item2[] = {"fuck_off_client",1,250,-331.799194,-145.967834,-241.799164,-95.967850,0.000000,"fuck off" \n "client"};
 item3[] = {"true",8,218,-12.379395,-94.819038,23.350616,-71.292206,0.000000,"true"};
-item4[] = {"Setup_Eastern_bl",2,4346,-42.778839,-60.485168,47.221176,-10.485168,0.000000,"Setup" \n "Eastern block"};
+item4[] = {"Setup_Eastern_bl",2,250,-42.778839,-60.485168,47.221176,-10.485168,0.000000,"Setup" \n "Eastern block"};
 item5[] = {"Eastern_Objectiv",2,250,-45.256897,103.513313,44.743118,153.513321,0.000000,"Eastern" \n "Objectives"};
 item6[] = {"true",8,218,-48.912117,9.171326,41.087891,59.171326,0.000000,"true"};
 item7[] = {"true",8,218,-18.789665,393.288330,18.813965,419.897156,0.000000,"true"};
@@ -13,7 +13,7 @@ item8[] = {"Western_Objectiv",2,250,-63.179047,431.559814,55.826096,466.589478,0
 item9[] = {"You_win_",1,250,-45.933182,671.755798,44.066833,721.755798,0.000000,"You win!"};
 item10[] = {"Engineering_Depot",4,218,-169.846436,45.392593,-66.522125,134.376511,0.500000,"Engineering" \n "Depot" \n "Captured?"};
 item11[] = {"true",8,218,-102.971451,173.153091,-59.522461,206.052750,0.000000,"true"};
-item12[] = {"Complete_task_Recolor",2,250,-234.862503,153.322830,-141.737900,207.972321,0.000000,"Complete task" \n "Recolor flag" \n "Change marker"};
+item12[] = {"Complete_task_Recolor",2,4346,-234.862503,153.322830,-141.737900,207.972321,0.000000,"Complete task" \n "Recolor flag" \n "Change marker"};
 item13[] = {"Airfield_Captured",4,218,56.158325,52.784088,153.844788,137.633774,0.800000,"Airfield" \n "Captured?" \n ""};
 item14[] = {"true",8,218,67.246490,175.098267,110.695473,207.997925,0.000000,"true"};
 item15[] = {"Complete_task_Recolor_1",2,250,154.296234,149.761383,249.292114,202.539627,0.000000,"Complete task" \n "Recolor flag" \n "Change marker"};
@@ -141,10 +141,7 @@ class FSM
                          "[west, [""tskEngineeringDepot"",""tskEasternPresence""], [""" \n
                          "NATO has established a small engineering depot in the area. Capturing it would prove useful." \n
                          """, ""Capture Engineering Depot"", ""CAPTURE""], trgEngineeringDepotGarrison, ""Created"", 32, true, ""repair"", true] call BIS_fnc_taskCreate;" \n
-                         "" \n
-                         "[west, ""tskEvac"", [""" \n
-                         "Move to the evac point once your main objectives are complete." \n
-                         """, ""Extract"", ""EVAC""], ""mrkExtract"", ""Created"", 31, true, ""exit"", true] call BIS_fnc_taskCreate;"/*%FSM</STATEINIT""">*/;
+                         ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -296,11 +293,11 @@ class FSM
                 {
                         name = "Complete_task_Recolor";
                         itemno = 12;
-                        init = /*%FSM<STATEINIT""">*/"_offArmyComplete = True;" \n
+                        init = /*%FSM<STATEINIT""">*/"_EngineeringDepotCaptured = True;" \n
                          """mrkEngineeringDepot"" setMarkerColor ""colorBLUFOR""; " \n
                          """mrkEngineeringDepot"" setMarkerType ""n_service"";" \n
                          """mrkEngineeringDepot"" setMarkerAlpha 0.8;" \n
-                         "[""tskTaskOne"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                         "[""tskEngineeringDepot"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -399,10 +396,10 @@ class FSM
                         name = "complete_task_change";
                         itemno = 23;
                         init = /*%FSM<STATEINIT""">*/"_CastleCleared = True;" \n
-                         """mrkAirfield"" setMarkerColor ""colorBLUFOR""; " \n
-                         """mrkAirfield"" setMarkerType ""n_Ordnance"";" \n
-                         """mrkAirfield"" setMarkerAlpha 0.8;" \n
-                         "[""tskAirfield"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                         """mrkThronos"" setMarkerColor ""colorBLUFOR""; " \n
+                         """mrkThronos"" setMarkerType ""n_mech_inf"";" \n
+                         """mrkThronos"" setMarkerAlpha 0.8;" \n
+                         "[""tskCastle"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -454,9 +451,9 @@ class FSM
                         itemno = 27;
                         init = /*%FSM<STATEINIT""">*/"_CityCleared = True;" \n
                          """mrkOreokastro"" setMarkerColor ""colorBLUFOR""; " \n
-                         """mrkOreokastro"" setMarkerType ""n_Ordnance"";" \n
+                         """mrkOreokastro"" setMarkerType ""n_mech_inf"";" \n
                          """mrkOreokastro"" setMarkerAlpha 0.8;" \n
-                         "[""tskAirfield"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                         "[""tskCity"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -483,7 +480,7 @@ class FSM
                          """mrkCoast"" setMarkerColor ""colorBLUFOR""; " \n
                          """mrkCoast"" setMarkerType ""n_installation"";" \n
                          """mrkCoast"" setMarkerAlpha 0.8;" \n
-                         "[""tskAirfield"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                         "[""tskCoast"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
