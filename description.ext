@@ -1,3 +1,7 @@
+//Dynaspawn
+#include "dynaspawn-framework\dynaspawn-main.hpp"
+#include "dynaspawn-framework\dynaspawn-extra.hpp"
+
 disabledAI = 1; // No AI slots in the lobby
 aiKills = 1;
 respawn = 3; //Base respawn
@@ -55,6 +59,7 @@ class Params
 //TFR fix function
 class CfgFunctions
 {
+	#include "dynaspawn-framework\includes\func_defines.hpp"
 	class SNX
 	{
 		class util

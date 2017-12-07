@@ -1,0 +1,3 @@
+[submodule "dynaspawn-framework"]
+	path = dynaspawn-framework
+	url = http://dev.onozuka.info/source/dynaspawn-framework
