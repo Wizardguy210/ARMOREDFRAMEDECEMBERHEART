@@ -8,7 +8,7 @@ class EditorData
 	toggles=1025;
 	class ItemIDProvider
 	{
-		nextID=3771;
+		nextID=3786;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9174.4521,23.114441,21641.42};
-		dir[]={-0.26271901,-0.24122383,0.93426424};
-		up[]={-0.06530907,0.97045988,0.23225403};
-		aside[]={0.96269047,-9.2323171e-007,0.27071014};
+		pos[]={10668.878,25.438883,22234.422};
+		dir[]={0.33886495,-0.65803659,0.67251676};
+		up[]={0.29610333,0.75299585,0.58765417};
+		aside[]={0.89308965,2.9656803e-007,-0.45000702};
 	};
 };
 binarizationWanted=0;
@@ -65,13 +65,14 @@ addons[]=
 	"A3_Air_F_EPB_Heli_Light_03",
 	"A3_Ui_F",
 	"ace_map",
-	"A3_Air_F_Jets_Plane_Fighter_01"
+	"A3_Air_F_Jets_Plane_Fighter_01",
+	"A3_Air_F_Heli_Light_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=26;
+		items=27;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -251,6 +252,13 @@ class AddonsMetaData
 		{
 			className="A3_Air_F_Jets";
 			name="Arma 3 Jets - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item26
+		{
+			className="A3_Air_F";
+			name="Arma 3 Alpha - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -559,7 +567,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=85;
+		items=88;
 		class Item0
 		{
 			dataType="Logic";
@@ -4898,6 +4906,7 @@ class Mission
 					};
 					id=3676;
 					type="Land_Pallets_stack_F";
+					atlOffset=1.1444092e-005;
 				};
 				class Item33
 				{
@@ -4985,6 +4994,7 @@ class Mission
 					};
 					id=3681;
 					type="Land_Pallets_stack_F";
+					atlOffset=-7.6293945e-006;
 				};
 				class Item38
 				{
@@ -5229,6 +5239,7 @@ class Mission
 					};
 					id=3763;
 					type="Land_Razorwire_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item52
 				{
@@ -5246,6 +5257,7 @@ class Mission
 					};
 					id=3764;
 					type="Land_Razorwire_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item53
 				{
@@ -5340,7 +5352,7 @@ class Mission
 				};
 			};
 			id=3692;
-			atlOffset=0.051033974;
+			atlOffset=0.19161892;
 		};
 		class Item65
 		{
@@ -7301,18 +7313,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10673.379,16.531944,22242.049};
-				angles[]={0.061256282,0.54899329,0.022662206};
+				position[]={10673.379,16.532173,22242.049};
+				angles[]={0.061261058,0.54899329,0.022654373};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				pylons="PylonMissile_1Rnd_LG_scalpel;PylonMissile_1Rnd_LG_scalpel;";
+				pylons="PylonMissile_1Rnd_LG_scalpel[0];PylonMissile_1Rnd_LG_scalpel;";
 			};
 			id=3741;
 			type="I_Heli_light_03_dynamicLoadout_F";
-			atlOffset=-0.01322937;
+			atlOffset=-0.013000488;
 		};
 		class Item74
 		{
@@ -7871,6 +7883,165 @@ class Mission
 			{
 			};
 			id=3758;
+		};
+		class Item85
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={10612.312,13.18,22250.979};
+			};
+			title="add minor supply crates";
+			description="Place down some minor supply crates containing 2-3 magazines & enough medical to supply a single soldier. ";
+			id=3774;
+			atlOffset=1.1444092e-005;
+		};
+		class Item86
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9121.7549,17.148636,21548.928};
+				angles[]={0.019996032,5.5411816,0.027993103};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				pylons="PylonRack_7Rnd_Rocket_04_AP_F;PylonRack_7Rnd_Rocket_04_AP_F;";
+			};
+			id=3776;
+			type="B_Heli_Light_01_dynamicLoadout_F";
+			atlOffset=-0.002155304;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['VehicleCustomization',_value]} else {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"ARRAY"
+											};
+										};
+										class value
+										{
+											items=4;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="AddTread_Short";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1;
+												};
+											};
+											class Item2
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="AddTread";
+												};
+											};
+											class Item3
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item87
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9099.6631,16.662683,21574.262};
+				angles[]={0.0066592805,2.3452337,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				pylons="PylonMissile_1Rnd_LG_scalpel;PylonMissile_1Rnd_LG_scalpel;";
+			};
+			id=3783;
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 	};
 };
