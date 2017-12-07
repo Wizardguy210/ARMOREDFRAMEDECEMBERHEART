@@ -5,7 +5,7 @@ item0[] = {"init",0,250,-40.348846,-149.418610,49.651154,-99.418610,0.000000,"in
 item1[] = {"SERVER_CHECK",4,218,-192.040344,-145.759003,-102.040337,-95.759003,0.000000,"SERVER" \n "CHECK"};
 item2[] = {"fuck_off_client",1,250,-331.799194,-145.967834,-241.799164,-95.967850,0.000000,"fuck off" \n "client"};
 item3[] = {"true",8,218,-12.379395,-94.819038,23.350616,-71.292206,0.000000,"true"};
-item4[] = {"Setup_Eastern_bl",2,250,-42.778839,-60.485168,47.221176,-10.485168,0.000000,"Setup" \n "Eastern block"};
+item4[] = {"Setup_Eastern_bl",2,4346,-42.778839,-60.485168,47.221176,-10.485168,0.000000,"Setup" \n "Eastern block"};
 item5[] = {"Eastern_Objectiv",2,250,-45.256897,103.513313,44.743118,153.513321,0.000000,"Eastern" \n "Objectives"};
 item6[] = {"true",8,218,-48.912117,9.171326,41.087891,59.171326,0.000000,"true"};
 item7[] = {"true",8,218,-18.789665,393.288330,18.813965,419.897156,0.000000,"true"};
@@ -13,12 +13,12 @@ item8[] = {"Western_Objectiv",2,250,-63.179047,431.559814,55.826096,466.589478,0
 item9[] = {"You_win_",1,250,-45.933182,671.755798,44.066833,721.755798,0.000000,"You win!"};
 item10[] = {"Engineering_Depot",4,218,-169.846436,45.392593,-66.522125,134.376511,0.500000,"Engineering" \n "Depot" \n "Captured?"};
 item11[] = {"true",8,218,-102.971451,173.153091,-59.522461,206.052750,0.000000,"true"};
-item12[] = {"Complete_task_Recolor",2,4346,-234.862503,153.322830,-141.737900,207.972321,0.000000,"Complete task" \n "Recolor flag" \n "Change marker"};
+item12[] = {"Complete_task_Recolor",2,250,-234.862503,153.322830,-141.737900,207.972321,0.000000,"Complete task" \n "Recolor flag" \n "Change marker"};
 item13[] = {"Airfield_Captured",4,218,56.158325,52.784088,153.844788,137.633774,0.800000,"Airfield" \n "Captured?" \n ""};
 item14[] = {"true",8,218,67.246490,175.098267,110.695473,207.997925,0.000000,"true"};
 item15[] = {"Complete_task_Recolor_1",2,250,154.296234,149.761383,249.292114,202.539627,0.000000,"Complete task" \n "Recolor flag" \n "Change marker"};
 item16[] = {"SPAAG_destroyed",4,218,106.576263,298.888275,196.576263,348.888275,0.000000,"SPAAG" \n "destroyed"};
-item17[] = {"Setup_Wester_Blo",2,250,-42.286377,327.243225,38.537460,368.429993,0.000000,"Setup" \n "Wester Block"};
+item17[] = {"Setup_Western_Bl",2,250,-42.286377,327.243225,38.537460,368.429993,0.000000,"Setup" \n "Western Block"};
 item18[] = {"Eastern_Objectives",4,218,-48.431793,205.734879,54.842255,303.572113,0.100000,"Eastern" \n "Objectives" \n "Completed"};
 item19[] = {"Castle_Cleared",4,218,-181.895508,545.050903,-91.895508,595.050964,0.000000,"Castle" \n "Cleared"};
 item20[] = {"City_Cleared",4,218,78.113731,549.666321,168.113739,599.666321,0.000000,"City" \n "Cleared"};
@@ -130,17 +130,17 @@ class FSM
                         init = /*%FSM<STATEINIT""">*/"_AirfieldCaptured = False;" \n
                          "_EngineeringDepotCaptured = False;" \n
                          "" \n
-                         "[west, ""tskEasternPresence"", [""" \n
+                         "[resistance, ""tskEasternPresence"", [""" \n
                          "There are a number of NATO implements nearby. Capture them to assist in our advance on the west." \n
                          """, ""Eastern Presence"", ""EAST""], objNull, ""Created"", 1, true, ""e"", true] call BIS_fnc_taskCreate;" \n
                          "" \n
-                         "[west, [""tskAirfield"",""tskEasternPresence""], [""" \n
+                         "[resistance, [""tskAirfield"",""tskEasternPresence""], [""" \n
                          "One of our old airfields has been occupied by NATO forces and converted to a supply storage area. Capture it.""" \n
-                         ", ""Capture Supply Depot"", ""CAPTURE""], trgAirfieldGarrison, ""Assigned"", 33, true, ""rearm"", true] call BIS_fnc_taskCreate;" \n
+                         ", ""Capture Supply Depot"", ""CAPTURE""], ""mrkAirfield"", ""Assigned"", 33, true, ""rearm"", true] call BIS_fnc_taskCreate;" \n
                          "" \n
-                         "[west, [""tskEngineeringDepot"",""tskEasternPresence""], [""" \n
+                         "[resistance, [""tskEngineeringDepot"",""tskEasternPresence""], [""" \n
                          "NATO has established a small engineering depot in the area. Capturing it would prove useful." \n
-                         """, ""Capture Engineering Depot"", ""CAPTURE""], trgEngineeringDepotGarrison, ""Created"", 32, true, ""repair"", true] call BIS_fnc_taskCreate;" \n
+                         """, ""Capture Engineering Depot"", ""CAPTURE""], ""mrkEngineeringDepot"", ""Created"", 32, true, ""repair"", true] call BIS_fnc_taskCreate;" \n
                          ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -195,7 +195,7 @@ class FSM
                                 {
                                         itemno = 18;
                                         priority = 0.100000;
-                                        to="Setup_Wester_Blo";
+                                        to="Setup_Western_Bl";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"_AirfieldCaptured && _EngineeringDepotCaptured"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
@@ -342,10 +342,10 @@ class FSM
                         };
                 };
                 /*%FSM</STATE>*/
-                /*%FSM<STATE "Setup_Wester_Blo">*/
-                class Setup_Wester_Blo
+                /*%FSM<STATE "Setup_Western_Bl">*/
+                class Setup_Western_Bl
                 {
-                        name = "Setup_Wester_Blo";
+                        name = "Setup_Western_Bl";
                         itemno = 17;
                         init = /*%FSM<STATEINIT""">*/"_SPAAGDestroyed = False;" \n
                          "_CastleCleared = False;" \n
@@ -354,23 +354,23 @@ class FSM
                          "" \n
                          "[""tskEasternPresence"", ""Succeeded"", true] call BIS_fnc_taskSetState;" \n
                          "" \n
-                         "[west, ""tskWesternPresence"", [""" \n
+                         "[resistance, ""tskWesternPresence"", [""" \n
                          "NATO has a large presence on the north-western end of the island. It'll be your job to reduce this presence." \n
                          """, ""Western Presence"", ""WEST""], objNull, ""Created"", 1, true, ""w"", true] call BIS_fnc_taskCreate;" \n
                          "" \n
-                         "[west, [""tskCoast"",""tskWesternPresence""], [""" \n
+                         "[resistance, [""tskCoast"",""tskWesternPresence""], [""" \n
                          "A small anti-ship outpost has been established in Faros. Disabling it will allow us to assist you with some naval support." \n
                          """, ""Clear costal outpost"", ""CLEAR""], ""mrkCoast"", ""created"", 13, true, ""kill"", true] call BIS_fnc_taskCreate;" \n
                          "" \n
-                         "[west, [""tskSPAAG"",""tskWesternPresence""], [""" \n
+                         "[resistance, [""tskSPAAG"",""tskWesternPresence""], [""" \n
                          "There is a self-propelled anti-aircraft gun in the vicinity of the western base. Your air units will not be able to effective assist you in the area till you take it out." \n
                          """, ""Disable SPAAG"", ""DISABLE""], objSPAAG, ""created"", 13, true, ""destroy"", true] call BIS_fnc_taskCreate;" \n
                          "" \n
-                         "[west, [""tskCastle"",""tskWesternPresence""], [""" \n
+                         "[resistance, [""tskCastle"",""tskWesternPresence""], [""" \n
                          "Thronos Castle been heavily fortified. Taking out Oreokastro will be a lot easier without that looming bunker. Take it out." \n
                          """, ""Clear Thronos Castle"", ""KILL""], ""mrkThronos"", ""created"", 12, true, ""attack"", true] call BIS_fnc_taskCreate;" \n
                          "" \n
-                         "[west, [""tskCity"",""tskWesternPresence""], [""" \n
+                         "[resistance, [""tskCity"",""tskWesternPresence""], [""" \n
                          "Oreokastro is being used as a staging point, supply depot, barracks and generally a lot of things by NATO. Clear the place out." \n
                          """, ""Clear Oreokastro."", ""KILL""], ""mrkOreokastro"", ""created"", 11, true, ""attack"", true] call BIS_fnc_taskCreate;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
