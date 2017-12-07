@@ -1,6 +1,10 @@
 ["Init", []] spawn SNX_fnc_tfarSetup;
 
 //Literally copied from oscillating unident
+//Todo: Briefing
+//Todo: Loadouts
+//Todo: Logical radio channel layout
+//Todo: Add insignias maybe?
 
 /*
 //Briefing
