@@ -1,0 +1,512 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, ARMORED FRAME DECEMBER HEART">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-40.348846,-149.418610,49.651154,-99.418610,0.000000,"init"};
+item1[] = {"SERVER_CHECK",4,218,-192.040344,-145.759003,-102.040337,-95.759003,0.000000,"SERVER" \n "CHECK"};
+item2[] = {"fuck_off_client",1,250,-331.799194,-145.967834,-241.799164,-95.967850,0.000000,"fuck off" \n "client"};
+item3[] = {"true",8,218,-12.379395,-94.819038,23.350616,-71.292206,0.000000,"true"};
+item4[] = {"Setup_Eastern_bl",2,4346,-42.778839,-60.485168,47.221176,-10.485168,0.000000,"Setup" \n "Eastern block"};
+item5[] = {"Eastern_Objectiv",2,250,-45.256897,103.513313,44.743118,153.513321,0.000000,"Eastern" \n "Objectives"};
+item6[] = {"true",8,218,-48.912117,9.171326,41.087891,59.171326,0.000000,"true"};
+item7[] = {"true",8,218,-18.789665,393.288330,18.813965,419.897156,0.000000,"true"};
+item8[] = {"Western_Objectiv",2,250,-63.179047,431.559814,55.826096,466.589478,0.000000,"Western Objectives"};
+item9[] = {"You_win_",1,250,-45.933182,671.755798,44.066833,721.755798,0.000000,"You win!"};
+item10[] = {"Engineering_Depot",4,218,-169.846436,45.392593,-66.522125,134.376511,0.500000,"Engineering" \n "Depot" \n "Captured?"};
+item11[] = {"true",8,218,-102.971451,173.153091,-59.522461,206.052750,0.000000,"true"};
+item12[] = {"Complete_task_Recolor",2,250,-234.862503,153.322830,-141.737900,207.972321,0.000000,"Complete task" \n "Recolor flag" \n "Change marker"};
+item13[] = {"Airfield_Captured",4,218,56.158325,52.784088,153.844788,137.633774,0.800000,"Airfield" \n "Captured?" \n ""};
+item14[] = {"true",8,218,67.246490,175.098267,110.695473,207.997925,0.000000,"true"};
+item15[] = {"Complete_task_Recolor_1",2,250,154.296234,149.761383,249.292114,202.539627,0.000000,"Complete task" \n "Recolor flag" \n "Change marker"};
+item16[] = {"SPAAG_destroyed",4,218,106.576263,298.888275,196.576263,348.888275,0.000000,"SPAAG" \n "destroyed"};
+item17[] = {"Setup_Wester_Blo",2,250,-42.286377,327.243225,38.537460,368.429993,0.000000,"Setup" \n "Wester Block"};
+item18[] = {"Eastern_Objectives",4,218,-48.431793,205.734879,54.842255,303.572113,0.100000,"Eastern" \n "Objectives" \n "Completed"};
+item19[] = {"Castle_Cleared",4,218,-181.895508,545.050903,-91.895508,595.050964,0.000000,"Castle" \n "Cleared"};
+item20[] = {"City_Cleared",4,218,78.113731,549.666321,168.113739,599.666321,0.000000,"City" \n "Cleared"};
+item21[] = {"Coast_Cleared",4,218,-178.818420,300.426849,-88.818420,350.426880,0.000000,"Coast" \n "Cleared"};
+item22[] = {"Western_Objectives",4,218,-54.967964,525.050110,50.417236,619.667053,0.000000,"Western" \n "Objectives" \n "Completed"};
+item23[] = {"complete_task_change",2,250,-315.090363,542.950439,-225.090363,592.950439,0.000000,"complete task" \n "change marker"};
+item24[] = {"true",8,218,-185.855103,472.948029,-140.472015,498.331787,0.000000,"true"};
+item25[] = {"complete_task_change_1",2,250,218.005280,299.095673,308.005310,349.095673,0.000000,"complete task" \n "change marker" \n "free airstrike?"};
+item26[] = {"true",8,218,148.772110,395.252960,194.155212,419.098175,0.000000,"true"};
+item27[] = {"complete_task_change_2",2,250,201.850983,549.104553,291.851013,599.104553,0.000000,"complete task" \n "change marker"};
+item28[] = {"true",8,218,142.617935,471.409454,193.385742,499.870209,0.000000,"true"};
+item29[] = {"complete_task_change_3",2,250,-294.320404,300.634186,-204.320374,350.634155,0.000000,"complete task" \n "change marker" \n "naval arty?"};
+item30[] = {"true",8,218,-190.470642,392.175934,-138.164246,422.175232,0.000000,"true"};
+link0[] = {0,1};
+link1[] = {0,3};
+link2[] = {1,2};
+link3[] = {3,4};
+link4[] = {4,6};
+link5[] = {5,10};
+link6[] = {5,13};
+link7[] = {5,18};
+link8[] = {6,5};
+link9[] = {7,8};
+link10[] = {8,16};
+link11[] = {8,19};
+link12[] = {8,20};
+link13[] = {8,21};
+link14[] = {8,22};
+link15[] = {10,12};
+link16[] = {11,5};
+link17[] = {12,11};
+link18[] = {13,15};
+link19[] = {14,5};
+link20[] = {15,14};
+link21[] = {16,25};
+link22[] = {17,7};
+link23[] = {18,17};
+link24[] = {19,23};
+link25[] = {20,27};
+link26[] = {21,29};
+link27[] = {22,9};
+link28[] = {23,24};
+link29[] = {24,8};
+link30[] = {25,26};
+link31[] = {26,8};
+link32[] = {27,28};
+link33[] = {28,8};
+link34[] = {29,30};
+link35[] = {30,8};
+globals[] = {0.000000,0,0,0,0,640,480,1,78,6316128,1,-630.762451,537.678955,764.541077,-191.849792,1080,884,1};
+window[] = {2,-1,-1,-1,-1,889,130,1570,130,3,1098};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "ARMORED FRAME DECEMBER HEART";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Setup_Eastern_bl";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "SERVER_CHECK">*/
+                                class SERVER_CHECK
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="fuck_off_client";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isServer"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "fuck_off_client">*/
+                class fuck_off_client
+                {
+                        name = "fuck_off_client";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Setup_Eastern_bl">*/
+                class Setup_Eastern_bl
+                {
+                        name = "Setup_Eastern_bl";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_AirfieldCaptured = False;" \n
+                         "_EngineeringDepotCaptured = False;" \n
+                         "" \n
+                         "[west, ""tskEasternPresence"", [""" \n
+                         "There are a number of NATO implements nearby. Capture them to assist in our advance on the west." \n
+                         """, ""Eastern Presence"", ""EAST""], objNull, ""Created"", 1, true, ""e"", true] call BIS_fnc_taskCreate;" \n
+                         "" \n
+                         "[west, [""tskAirfield"",""tskEasternPresence""], [""" \n
+                         "One of our old airfields has been occupied by NATO forces and converted to a supply storage area. Capture it.""" \n
+                         ", ""Capture Supply Depot"", ""CAPTURE""], trgAirfieldGarrison, ""Assigned"", 33, true, ""rearm"", true] call BIS_fnc_taskCreate;" \n
+                         "" \n
+                         "[west, [""tskEngineeringDepot"",""tskEasternPresence""], [""" \n
+                         "NATO has established a small engineering depot in the area. Capturing it would prove useful." \n
+                         """, ""Capture Engineering Depot"", ""CAPTURE""], trgEngineeringDepotGarrison, ""Created"", 32, true, ""repair"", true] call BIS_fnc_taskCreate;" \n
+                         "" \n
+                         "[west, ""tskEvac"", [""" \n
+                         "Move to the evac point once your main objectives are complete." \n
+                         """, ""Extract"", ""EVAC""], ""mrkExtract"", ""Created"", 31, true, ""exit"", true] call BIS_fnc_taskCreate;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="Eastern_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Eastern_Objectiv">*/
+                class Eastern_Objectiv
+                {
+                        name = "Eastern_Objectiv";
+                        itemno = 5;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Airfield_Captured">*/
+                                class Airfield_Captured
+                                {
+                                        itemno = 13;
+                                        priority = 0.800000;
+                                        to="Complete_task_Recolor_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_AirfieldCaptured && _AirfieldCaptured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Engineering_Depot">*/
+                                class Engineering_Depot
+                                {
+                                        itemno = 10;
+                                        priority = 0.500000;
+                                        to="Complete_task_Recolor";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_EngineeringDepotCaptured && _EngineeringDepotCaptured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Eastern_Objectives">*/
+                                class Eastern_Objectives
+                                {
+                                        itemno = 18;
+                                        priority = 0.100000;
+                                        to="Setup_Wester_Blo";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_AirfieldCaptured && _EngineeringDepotCaptured"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Western_Objectiv">*/
+                class Western_Objectiv
+                {
+                        name = "Western_Objectiv";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Castle_Cleared">*/
+                                class Castle_Cleared
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="complete_task_change";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_CastleCleared"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "City_Cleared">*/
+                                class City_Cleared
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="complete_task_change_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_CityCleared"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Coast_Cleared">*/
+                                class Coast_Cleared
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="complete_task_change_3";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_CoastCleared"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Western_Objectives">*/
+                                class Western_Objectives
+                                {
+                                        itemno = 22;
+                                        priority = 0.000000;
+                                        to="You_win_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_SPAAGDestroyed &&" \n
+                                         "_CastleCleared &&" \n
+                                         "_CoastCleared &&" \n
+                                         "_CityCleared &&"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "SPAAG_destroyed">*/
+                                class SPAAG_destroyed
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="complete_task_change_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_SPAAGDestroyed"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "You_win_">*/
+                class You_win_
+                {
+                        name = "You_win_";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/"{_x allowdamage false} forEach allPlayers;" \n
+                         "[""tskWesternPresence"", ""Succeeded"", true] call BIS_fnc_taskSetState;" \n
+                         """End1"" call BIS_fnc_EndMissionServer;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Complete_task_Recolor">*/
+                class Complete_task_Recolor
+                {
+                        name = "Complete_task_Recolor";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"_offArmyComplete = True;" \n
+                         """mrkEngineeringDepot"" setMarkerColor ""colorBLUFOR""; " \n
+                         """mrkEngineeringDepot"" setMarkerType ""n_service"";" \n
+                         """mrkEngineeringDepot"" setMarkerAlpha 0.8;" \n
+                         "[""tskTaskOne"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="Eastern_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Complete_task_Recolor_1">*/
+                class Complete_task_Recolor_1
+                {
+                        name = "Complete_task_Recolor_1";
+                        itemno = 15;
+                        init = /*%FSM<STATEINIT""">*/"_AirfieldCaptured = True;" \n
+                         """mrkAirfield"" setMarkerColor ""colorBLUFOR""; " \n
+                         """mrkAirfield"" setMarkerType ""n_Ordnance"";" \n
+                         """mrkAirfield"" setMarkerAlpha 0.8;" \n
+                         "[""tskAirfield"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="Eastern_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Setup_Wester_Blo">*/
+                class Setup_Wester_Blo
+                {
+                        name = "Setup_Wester_Blo";
+                        itemno = 17;
+                        init = /*%FSM<STATEINIT""">*/"_SPAAGDestroyed = False;" \n
+                         "_CastleCleared = False;" \n
+                         "_CoastCleared = False;" \n
+                         "_CityCleared = False;" \n
+                         "" \n
+                         "[""tskEasternPresence"", ""Succeeded"", true] call BIS_fnc_taskSetState;" \n
+                         "" \n
+                         "[west, ""tskWesternPresence"", [""" \n
+                         "NATO has a large presence on the north-western end of the island. It'll be your job to reduce this presence." \n
+                         """, ""Western Presence"", ""WEST""], objNull, ""Created"", 1, true, ""w"", true] call BIS_fnc_taskCreate;" \n
+                         "" \n
+                         "[west, [""tskCoast"",""tskWesternPresence""], [""" \n
+                         "A small anti-ship outpost has been established in Faros. Disabling it will allow us to assist you with some naval support." \n
+                         """, ""Clear costal outpost"", ""CLEAR""], ""mrkCoast"", ""created"", 13, true, ""kill"", true] call BIS_fnc_taskCreate;" \n
+                         "" \n
+                         "[west, [""tskSPAAG"",""tskWesternPresence""], [""" \n
+                         "There is a self-propelled anti-aircraft gun in the vicinity of the western base. Your air units will not be able to effective assist you in the area till you take it out." \n
+                         """, ""Disable SPAAG"", ""DISABLE""], objSPAAG, ""created"", 13, true, ""destroy"", true] call BIS_fnc_taskCreate;" \n
+                         "" \n
+                         "[west, [""tskCastle"",""tskWesternPresence""], [""" \n
+                         "Thronos Castle been heavily fortified. Taking out Oreokastro will be a lot easier without that looming bunker. Take it out." \n
+                         """, ""Clear Thronos Castle"", ""KILL""], ""mrkThronos"", ""created"", 12, true, ""attack"", true] call BIS_fnc_taskCreate;" \n
+                         "" \n
+                         "[west, [""tskCity"",""tskWesternPresence""], [""" \n
+                         "Oreokastro is being used as a staging point, supply depot, barracks and generally a lot of things by NATO. Clear the place out." \n
+                         """, ""Clear Oreokastro."", ""KILL""], ""mrkOreokastro"", ""created"", 11, true, ""attack"", true] call BIS_fnc_taskCreate;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Western_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "complete_task_change">*/
+                class complete_task_change
+                {
+                        name = "complete_task_change";
+                        itemno = 23;
+                        init = /*%FSM<STATEINIT""">*/"_CastleCleared = True;" \n
+                         """mrkAirfield"" setMarkerColor ""colorBLUFOR""; " \n
+                         """mrkAirfield"" setMarkerType ""n_Ordnance"";" \n
+                         """mrkAirfield"" setMarkerAlpha 0.8;" \n
+                         "[""tskAirfield"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 24;
+                                        priority = 0.000000;
+                                        to="Western_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "complete_task_change_1">*/
+                class complete_task_change_1
+                {
+                        name = "complete_task_change_1";
+                        itemno = 25;
+                        init = /*%FSM<STATEINIT""">*/"_SPAAGDestroyed = True;" \n
+                         """mrkSPAAG"" setMarkerColor ""colorBLUFOR""; " \n
+                         """mrkSPAAG"" setMarkerType ""n_antiair"";" \n
+                         """mrkSPAAG"" setMarkerAlpha 0.8;" \n
+                         "[""tskSPAAG"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 26;
+                                        priority = 0.000000;
+                                        to="Western_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "complete_task_change_2">*/
+                class complete_task_change_2
+                {
+                        name = "complete_task_change_2";
+                        itemno = 27;
+                        init = /*%FSM<STATEINIT""">*/"_CityCleared = True;" \n
+                         """mrkOreokastro"" setMarkerColor ""colorBLUFOR""; " \n
+                         """mrkOreokastro"" setMarkerType ""n_Ordnance"";" \n
+                         """mrkOreokastro"" setMarkerAlpha 0.8;" \n
+                         "[""tskAirfield"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 28;
+                                        priority = 0.000000;
+                                        to="Western_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "complete_task_change_3">*/
+                class complete_task_change_3
+                {
+                        name = "complete_task_change_3";
+                        itemno = 29;
+                        init = /*%FSM<STATEINIT""">*/"_CoastCleared = True;" \n
+                         """mrkCoast"" setMarkerColor ""colorBLUFOR""; " \n
+                         """mrkCoast"" setMarkerType ""n_installation"";" \n
+                         """mrkCoast"" setMarkerAlpha 0.8;" \n
+                         "[""tskAirfield"", ""Succeeded"", true] call BIS_fnc_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="Western_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "fuck_off_client",
+                "You_win_",
+        };
+};
+/*%FSM</COMPILE>*/
