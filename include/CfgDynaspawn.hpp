@@ -50,7 +50,7 @@ class CfgDynaspawn
             {
                 class DYN_infantrySquad
                 {
-                    units[] = { "B_Soldier_TL_F", "B_Soldier_TL_F", "B_Soldier_TL_F", "B_medic_F", "B_Soldier_AR_F", "B_Soldier_AR_F", "B_Soldier_GL_F", "B_Soldier_LAT_F", "B_Soldier_A_F" };
+                    units[] = { "B_Soldier_SL_F", "B_Soldier_TL_F", "B_Soldier_TL_F", "B_medic_F", "B_Soldier_AR_F", "B_Soldier_AR_F", "B_Soldier_GL_F", "B_Soldier_LAT_F", "B_Soldier_A_F" };
                     ranks[] = { "Sergeant", "Corporal", "Corporal", "Corporal", "Private", "Private", "Private", "Private", "Private" };
                     skill[] = { 0.25, 0.5 };
                     canReinforce = 1;
@@ -110,7 +110,7 @@ class CfgDynaspawn
             keyword = "DYN_garrison";
             blacklist[] = {}; //Appended to global blacklist
             side = 0;
-            units[] = {"B_Soldier_F"}; //Pool of classnames to spawn
+            units[] = {"B_Soldier_TL_F", "B_medic_F", "B_Soldier_AR_F", "B_Soldier_AR_F", "B_Soldier_GL_F", "B_Soldier_LAT_F", "B_Soldier_A_F"}; //Pool of classnames to spawn
             maxUnits = 30; //Maximum of units to spawn in this zone
             customLoadout = 0;
             buildingOccupation = 0.5;
