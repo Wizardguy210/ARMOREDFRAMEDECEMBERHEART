@@ -5,7 +5,7 @@ item0[] = {"init",0,250,-40.348846,-149.418610,49.651154,-99.418610,0.000000,"in
 item1[] = {"SERVER_CHECK",4,218,-192.040344,-145.759003,-102.040337,-95.759003,0.000000,"SERVER" \n "CHECK"};
 item2[] = {"fuck_off_client",1,250,-331.799194,-145.967834,-241.799164,-95.967850,0.000000,"fuck off" \n "client"};
 item3[] = {"true",8,218,-12.379395,-94.819038,23.350616,-71.292206,0.000000,"true"};
-item4[] = {"Setup_Eastern_bl",2,250,-42.778839,-60.485168,47.221176,-10.485168,0.000000,"Setup" \n "Eastern block"};
+item4[] = {"Setup_Eastern_bl",2,4346,-42.778839,-60.485168,47.221176,-10.485168,0.000000,"Setup" \n "Eastern block"};
 item5[] = {"Eastern_Objectiv",2,250,-45.256897,103.513313,44.743118,153.513321,0.000000,"Eastern" \n "Objectives"};
 item6[] = {"true",8,218,-48.912117,9.171326,41.087891,59.171326,0.000000,"true"};
 item7[] = {"true",8,218,-18.789665,471.048096,18.813965,497.656921,0.000000,"true"};
@@ -18,7 +18,7 @@ item13[] = {"Airfield_Captured",4,218,56.158325,52.784088,153.844788,137.633774,
 item14[] = {"true",8,218,67.246490,175.098267,110.695473,207.997925,0.000000,"true"};
 item15[] = {"Complete_task_Recolor_1",2,250,154.296234,149.761383,249.292114,202.539627,0.000000,"Complete task" \n "Recolor flag" \n "Change marker"};
 item16[] = {"SPAAG_destroyed",4,218,106.576263,376.648041,196.576263,426.648041,0.000000,"SPAAG" \n "destroyed"};
-item17[] = {"Setup_Western_Bl",2,4346,-42.286377,405.002991,38.537460,446.189758,0.000000,"Setup" \n "Western Block"};
+item17[] = {"Setup_Western_Bl",2,250,-42.286377,405.002991,38.537460,446.189758,0.000000,"Setup" \n "Western Block"};
 item18[] = {"Eastern_Objectives",4,218,-48.431793,280.614624,54.842255,378.451874,0.100000,"Eastern" \n "Objectives" \n "Completed"};
 item19[] = {"Castle_Cleared",4,218,-181.895508,622.810669,-91.895508,672.810730,0.000000,"Castle" \n "Cleared"};
 item20[] = {"City_Cleared",4,218,78.113731,627.426086,168.113739,677.426086,0.000000,"City" \n "Cleared"};
@@ -68,7 +68,7 @@ link32[] = {27,28};
 link33[] = {28,8};
 link34[] = {29,30};
 link35[] = {30,8};
-globals[] = {0.000000,0,0,0,0,640,480,1,78,6316128,1,-556.723633,463.639893,703.938843,-131.247696,1080,884,1};
+globals[] = {0.000000,0,0,0,0,640,480,1,78,6316128,1,-602.129822,509.046021,741.104431,-168.413483,1080,884,1};
 window[] = {2,-1,-1,-32000,-32000,863,104,1544,104,3,1098};
 *//*%FSM</HEAD>*/
 class FSM
@@ -142,10 +142,42 @@ class FSM
                          "NATO has established a small engineering depot in the area. Capturing it would prove useful." \n
                          """, ""Capture Engineering Depot"", ""CAPTURE""], ""mrkEngineeringDepot"", ""Created"", 32, true, ""repair"", true] call BIS_fnc_taskCreate;" \n
                          "" \n
-                         "{_x} foreach [apod1, apod2];" \n
+                         "		{" \n
+                         "		_x addItemCargoGlobal [""30Rnd_556x45_Stanag_Tracer_Yellow"",100];  " \n
+                         "		_x addItemCargoGlobal [""200Rnd_65x39_cased_Box_Tracer"",40];   " \n
+                         "		_x addItemCargoGlobal [""HandGrenade"",20];   " \n
+                         "		_x addItemCargoGlobal [""SmokeShell"",50];   " \n
+                         "		_x addItemCargoGlobal [""SmokeShellGreen"",50];    " \n
+                         "		_x addItemCargoGlobal [""NLAW_F"",5];   " \n
+                         "		_x addItemCargoGlobal [""1Rnd_HE_Grenade_shell"",20];   " \n
+                         "		} forEach [apod1, apod2];" \n
                          "" \n
-                         "{_x} foreach [mpod1, mpod2];" \n
-                         ""/*%FSM</STATEINIT""">*/;
+                         "" \n
+                         "if ( ace_medical_level == 2) then    " \n
+                         "   {   " \n
+                         "		{" \n
+                         "		_x addItemCargoGlobal [""ACE_quikclot"",100];   " \n
+                         "		_x addItemCargoGlobal [""ACE_elasticBandage"",100];   " \n
+                         "		_x addItemCargoGlobal [""ACE_packingBandage"",100];   " \n
+                         "		_x addItemCargoGlobal [""ACE_tourniquet"",50];   " \n
+                         "		_x addItemCargoGlobal [""ACE_Morphine"",40];   " \n
+                         "		_x addItemCargoGlobal [""ACE_epinephrine"",20];   " \n
+                         "		_x addItemCargoGlobal [""ACE_atropine"",10];   " \n
+                         "		_x addItemCargoGlobal [""ACE_adenosine"",10];   " \n
+                         "		_x addItemCargoGlobal [""ACE_bloodIV"",20];   " \n
+                         "		_x addItemCargoGlobal [""ACE_personalAidKit"",5];   " \n
+                         "		_x addItemCargoGlobal [""ACE_defibrillator"",1];  " \n
+                         "		} forEach [mpod1, mpod2];" \n
+                         "   }   " \n
+                         "   else   " \n
+                         "   {   " \n
+                         "		{" \n
+                         "		_x addItemCargoGlobal [""ACE_fieldDressing"",300];   " \n
+                         "		_x addItemCargoGlobal [""ACE_Morphine"",50];   " \n
+                         "		_x addItemCargoGlobal [""ACE_epinephrine"",50];   " \n
+                         "		_x addItemCargoGlobal [""ACE_bloodIV"",20];   " \n
+                         "		} forEach [mpod1, mpod2];" \n
+                         "   };"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
