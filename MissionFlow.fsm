@@ -18,7 +18,7 @@ item13[] = {"Airfield_Captured",4,218,56.158325,52.784088,153.844788,137.633774,
 item14[] = {"true",8,218,67.246490,175.098267,110.695473,207.997925,0.000000,"true"};
 item15[] = {"Complete_task_Recolor_1",2,250,154.296234,149.761383,249.292114,202.539627,0.000000,"Complete task" \n "Recolor flag" \n "Change marker"};
 item16[] = {"SPAAG_destroyed",4,218,106.576263,376.648041,196.576263,426.648041,0.000000,"SPAAG" \n "destroyed"};
-item17[] = {"Setup_Western_Bl",2,250,-42.286377,405.002991,38.537460,446.189758,0.000000,"Setup" \n "Western Block"};
+item17[] = {"Setup_Western_Bl",2,4346,-42.286377,405.002991,38.537460,446.189758,0.000000,"Setup" \n "Western Block"};
 item18[] = {"Eastern_Objectives",4,218,-48.431793,280.614624,54.842255,378.451874,0.100000,"Eastern" \n "Objectives" \n "Completed"};
 item19[] = {"Castle_Cleared",4,218,-181.895508,622.810669,-91.895508,672.810730,0.000000,"Castle" \n "Cleared"};
 item20[] = {"City_Cleared",4,218,78.113731,627.426086,168.113739,677.426086,0.000000,"City" \n "Cleared"};
@@ -69,7 +69,7 @@ link33[] = {28,8};
 link34[] = {29,30};
 link35[] = {30,8};
 globals[] = {0.000000,0,0,0,0,640,480,1,78,6316128,1,-556.723633,463.639893,703.938843,-131.247696,1080,884,1};
-window[] = {2,-1,-1,-1,-1,1119,-1441,-1,360,3,1098};
+window[] = {2,-1,-1,-32000,-32000,863,104,1544,104,3,1098};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -141,6 +141,10 @@ class FSM
                          "[resistance, [""tskEngineeringDepot"",""tskEasternPresence""], [""" \n
                          "NATO has established a small engineering depot in the area. Capturing it would prove useful." \n
                          """, ""Capture Engineering Depot"", ""CAPTURE""], ""mrkEngineeringDepot"", ""Created"", 32, true, ""repair"", true] call BIS_fnc_taskCreate;" \n
+                         "" \n
+                         "{_x} foreach [apod1, apod2];" \n
+                         "" \n
+                         "{_x} foreach [mpod1, mpod2];" \n
                          ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -175,7 +179,9 @@ class FSM
                                         priority = 0.800000;
                                         to="Complete_task_Recolor_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_AirfieldCaptured && _AirfieldCaptured"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_AirfieldCaptured && " \n
+                                         "{ _x distance apod1 < 400 } count playableUnits + switchableunits > 0 && " \n
+                                         "{ side _x == west && alive _x} count (allUnits inAreaArray [position apod1, 400,400]) == 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -186,7 +192,9 @@ class FSM
                                         priority = 0.500000;
                                         to="Complete_task_Recolor";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_EngineeringDepotCaptured && _EngineeringDepotCaptured"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_EngineeringDepotCaptured && " \n
+                                         "{ _x distance engineeringtower < 100} count playableUnits + switchableunits > 0 && " \n
+                                         "{ side _x == west && alive _x} count (allUnits inAreaArray [position engineeringtower, 200,200]) == 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -353,6 +361,7 @@ class FSM
                          "_CityCleared = False;" \n
                          "" \n
                          "[""tskEasternPresence"", ""Succeeded"", true] call BIS_fnc_taskSetState;" \n
+                         """mrkEasternSector"" setMarkerColor ""colorBLUFOR""; " \n
                          "" \n
                          "[resistance, ""tskWesternPresence"", [""" \n
                          "NATO has a large presence on the north-western end of the island. It'll be your job to reduce this presence." \n
