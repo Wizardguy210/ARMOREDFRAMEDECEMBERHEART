@@ -6,14 +6,18 @@
 //Todo: Logical radio channel layout
 //Todo: Add insignias maybe?
 
-/*
-//Briefing
-player createDiaryRecord ["Diary", ["Mission Overview", "There are numerous AAF officers stationed in the area.<br/>
-You are to take them out.
-<br/>
-See your tasks for details."]];
 
-player createDiaryRecord ["Diary", ["Enemy presence", "Heavy AAF resistance. Outposts, bunkers infantry and armor.
+//Briefing
+player createDiaryRecord ["Diary", ["Mission Overview", "NATO has taken over a large portion of our former outposts in the north-eastern sector of the island. We're going to drive them away.<br/>
+<br/>
+We've divided this operation into two sectors, East and West. <br/>
+Capture the lightly-guarded eastern sector for supplies, then move onto the western sector."]];
+
+player createDiaryRecord ["Diary", ["Enemy presence", "East sector: Light NATO presence. <br/>
+Reinforced outposts, minor infantry, MRAPs, LSVs and a single CROWS-equipped IFV.<br/>
+<br/>
+West sector: Heavy NATO presence.<br/> 
+Heavily fortified outposts, ATGM killzones, MBTs, autocannon IFVs, LSVs, mortars, numerous infantry.
 "]];
 //Fancy links!
 player createDiaryRecord ["Diary", ["Signals", "Preset radio channels and frequencies:<br/>
@@ -21,24 +25,28 @@ player createDiaryRecord ["Diary", ["Signals", "Preset radio channels and freque
 <br/>
 <font color='#ff0000'>SHORT RANGE:<br/></font>
 <execute expression='[(call TFAR_fnc_activeSwRadio), 0]  call TFAR_fnc_setSwChannel;'>
-Hamlet, CH1 
+Alpha, CH1 
 (<font color='#99ff99'>100</font>)
 </execute><br/>
 <execute expression='[(call TFAR_fnc_activeSwRadio), 1]  call TFAR_fnc_setSwChannel;'>
-Othello, CH2
+Bravo, CH2
 (<font color='#99ff99'>110</font>)
 </execute><br/>
 <execute expression='[(call TFAR_fnc_activeSwRadio), 2]  call TFAR_fnc_setSwChannel;'>
-Lear, CH3
+Charlie, CH3
 (<font color='#99ff99'>120</font>)
 </execute><br/>
 <execute expression='[(call TFAR_fnc_activeSwRadio), 3]  call TFAR_fnc_setSwChannel;'>
-Romeo, CH4
+Delta, CH4
 (<font color='#99ff99'>130</font>)
 </execute><br/>
 <execute expression='[(call TFAR_fnc_activeSwRadio), 4]  call TFAR_fnc_setSwChannel;'>
-Juliet, CH5
-(<font color='#99ff99'>50</font>)
+Mars Frame, CH5
+(<font color='#99ff99'>140</font>)
+</execute><br/>
+<execute expression='[(call TFAR_fnc_activeSwRadio), 5]  call TFAR_fnc_setSwChannel;'>
+Jupiter Frame, CH6
+(<font color='#99ff99'>150</font>)
 </execute><br/>
 <execute expression='[(call TFAR_fnc_activeSwRadio), 7]  call TFAR_fnc_setSwChannel;'>
 Command Net, CH8
@@ -51,18 +59,13 @@ Command Net, CH1 (<font color='#99ff99'>50</font>)
 
 player createDiaryRecord ["Diary", ["Assets", "You have at your disposal:<br/>
 <br/>
-- 1 Slammer UP MBT (Hamlet)<br/>
-- 2 Slammer MBTs (Othello, Lear)<br/>
-- 1 Bobcat Support Vehicle (Romeo)<br/>
-- 1 Offroad w/ tools (Juliet)<br/>
-- 1 Stomper RCWS UGV<br/>
-- 1 MQ-12 Falcon (Bingo Ammo)<br/>
-- 1 MQ-4A Greyhawk (Bingo Ammo)<br/>
-- 1 UCAV Sentinel (Bingo Ammo)<br/>
-- Numerous AR-2 Recon Drones<br/>
+- 4 FV-720 Mora IFVs (Callsign: Heart) <br/>
+- 1  WY-55 Hellcat w/ 2x Scalpel ATGM (Callsign: Mars Frame)<br/>
+- 1 CH-49 Mohawk (Callsign: Jupiter Frame)<br/>
+- 3 Strider MRAPs
 "]];
 
-*/
+
 /****************************
 
 			Gear!
