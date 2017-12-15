@@ -267,3 +267,16 @@ if ((player getVariable "Channel") != 4) then {
 		[ player, "snx_ins_SupportSquad"] call BIS_fnc_setUnitInsignia; 
 		[player, "snx_ins_SupportSquad"] remoteExec ["BIS_fnc_setUnitInsignia", 0, true];
 	};*/
+	
+player addMPEventHandler ["MPKilled", 
+{
+	_kill = (_this select 0);
+	//Switch unit in condition to desired respawn unit
+	_kill addAction ["Combat Life Save", "resurrect.sqf", nil, 6, false, true, "", "typeof _this == 'B_medic_F'", 2];
+}];
+
+player addMPEventHandler ["MPRespawn",
+{
+	_corpse = (_this select 1);
+	deletevehicle _corpse;
+}];
