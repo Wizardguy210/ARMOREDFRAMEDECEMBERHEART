@@ -71,112 +71,88 @@ player createDiaryRecord ["Diary", ["Assets", "You have at your disposal:<br/>
 			Gear!
 
 ****************************/
+//Mostly using standard gear.
 
-
-/*
-removeallweapons player; 
-removeAllItems player;
-removeAllAssignedItems player;
-removeBackpack player;
-
-player forceAddUniform "U_B_CombatUniform_mcam_vest";
-player addHeadgear "H_HelmetSpecB_paint2";
-
+//Zeus / testing units don't need this section
+if (side player != resistance) then {exitwith};
 
 player addWeapon "Binocular";
-player linkItem "ItemRadio";
-player linkItem "ItemMap";
-player linkItem "ItemCompass";
-player linkItem "ItemWatch";
-player linkItem "ItemAndroid";	
-player addItem "NVGoggles";
+
+if (paramsArray select 4 == 1) then {
+	player linkItem "ItemMicroDAGR";	
+	}
+	else {
+	player linkItem "ItemGPS";
+};
+
+player removemagazines "30Rnd_9x21_Yellow_Mag";
+player removemagazines "9Rnd_45ACP_Mag";
+
+removebackpack player;
+player addbackpack "B_AssaultPack_dgtl";
+player addPrimaryWeaponItem "optic_ACO_grn";
 
 //set up gear for specific types first
 switch (typeOf player) do 
 {
-	case "B_Soldier_SL_F": //Lead
+	case "I_Soldier_SL_F": //SQLs need androids and radio packs
 		{
-			player addBackpack "tf_rt1523g_big";
-			player addVest "V_PlateCarrier1_rgr";
-			player addHeadgear "H_Cap_oli_hs";
-			
-			player addMagazines ["30Rnd_65x39_caseless_mag_Tracer",6];
-			player addWeapon "arifle_MX_F";
-			player addPrimaryWeaponItem "optic_Hamr";
-			player addPrimaryWeaponItem "ACE_muzzle_mzls_H";
-			player addMagazines ["11Rnd_45ACP_Mag",2];
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addHandgunItem "ACE_muzzle_mzls_smg_01";
-			player addHandgunItem "optic_MRD";
-			
-						
+			removebackpack player;
+			player addBackpack "TFAR_anprc155";
+			player linkItem "itemAndroid";
+			player addPrimaryWeaponItem "optic_MRCO";
 		};
-	
-	case "B_engineer_F": //Demo expert
+		
+	case "I_Soldier_TL_F": //TLs are grenadiers
 		{
-			player addVest "V_PlateCarrier1_rgr";
-			player addBackpack "B_Kitbag_mcamo";
-			
-			player addMagazines ["30Rnd_65x39_caseless_mag_Tracer",6];
-			player addWeapon "arifle_MX_F";
-			player addPrimaryWeaponItem "optic_Hamr";
-			player addPrimaryWeaponItem "ACE_muzzle_mzls_H";
-			player addMagazines ["11Rnd_45ACP_Mag",2];
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addHandgunItem "ACE_muzzle_mzls_smg_01";
-			player addHandgunItem "optic_MRD";
+			player addmagazines ["1Rnd_HE_Grenade_shell",30];
+		};	
+	
+	case "I_engineer_F": //demorepairbro
+		{
 			player addItem "Toolkit";
+			player addItem "Minedetector";
 			player addItem "ACE_defusalKit";
 			player addItem "ACE_clacker";
 			player addItem "ACE_EntrenchingTool";
-			player addMagazines["DemoCharge_Remote_Mag", 3];
-			
+			player addMagazine "DemoCharge_Remote_Mag";
 		};
 		
-	case "B_soldier_UAV_F": //Demo expert
+	case "I_Soldier_exp_F": //demobro
 		{
-			player addBackpack "B_UAV_01_backpack_F";
-			player addVest "V_PlateCarrier1_rgr";
-			
-			player addMagazines ["30Rnd_65x39_caseless_mag_Tracer",6];
-			player addWeapon "arifle_MX_F";
-			player addPrimaryWeaponItem "optic_Hamr";
-			player addPrimaryWeaponItem "ACE_muzzle_mzls_H";
-			player addMagazines ["11Rnd_45ACP_Mag",2];
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addHandgunItem "ACE_muzzle_mzls_smg_01";
-			player addHandgunItem "optic_MRD";
-			player linkItem "B_UavTerminal";
-			player addItem "ItemAndroid";
-			
-						
+			player addItem "Toolkit";
+			player addItem "Minedetector";
+			player addItem "ACE_defusalKit";
+			player addItem "ACE_clacker";
+			player addItem "ACE_EntrenchingTool";
+			player addMagazines ["DemoCharge_Remote_Mag",3];
+		};
+		
+	case "I_Soldier_exp_F": //machine gunnnn
+		{
+			player addItem "Toolkit";
+			player addItem "Minedetector";
+			player addItem "ACE_defusalKit";
+			player addItem "ACE_clacker";
+			player addItem "ACE_EntrenchingTool";
+			player addMagazines ["DemoCharge_Remote_Mag",3];
 		};
 	
-	case "B_medic_F": //Medic
+	case "I_medic_F": //Medic
 		{
-			player addVest "V_PlateCarrier1_rgr";
-			player addBackpack "B_TacticalPack_mcamo";
-			player addMagazines ["30Rnd_65x39_caseless_mag_Tracer",6];
-			player addWeapon "arifle_MX_F";
-			player addPrimaryWeaponItem "optic_Hamr";
-			player addPrimaryWeaponItem "ACE_muzzle_mzls_H";
-			player addMagazines ["11Rnd_45ACP_Mag",2];
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addHandgunItem "ACE_muzzle_mzls_smg_01";
-			player addHandgunItem "optic_MRD";
-			
-		
+			removebackpack player;
+			player addBackpack "B_TacticalPack_oli";
 			if ( ace_medical_level == 2) then 
 				{
 					player AddItem "ACE_surgicalKit";
 					player AddItem "ACE_Defibrillator";
-					for "_i" from 1 to 15 do {player addItem "ACE_morphine";};
+					for "_i" from 1 to 30 do {player addItem "ACE_morphine";};
 					for "_i" from 1 to 15 do {player addItem "ACE_epinephrine";};
-					for "_i" from 1 to 5 do {player addItem "ACE_bloodIV";};
-					for "_i" from 1 to 10 do {player addItem "ACE_fieldDressing";};
-					for "_i" from 1 to 10 do {player addItem "ACE_tourniquet";};
-					for "_i" from 1 to 20 do {player addItem "ACE_elasticBandage";};
-					for "_i" from 1 to 30 do {player addItem "ACE_packingBandage";};
+					for "_i" from 1 to 10 do {player addItem "ACE_bloodIV";};
+					for "_i" from 1 to 20 do {player addItem "ACE_fieldDressing";};
+					for "_i" from 1 to 5 do {player addItem "ACE_tourniquet";};
+					for "_i" from 1 to 30 do {player addItem "ACE_elasticBandage";};
+					for "_i" from 1 to 20 do {player addItem "ACE_packingBandage";};
 					for "_i" from 1 to 2 do {player addItem "ACE_personalAidKit";};
 				}
 				else
@@ -188,25 +164,92 @@ switch (typeOf player) do
 					for "_i" from 1 to 20 do {player addItemToBackpack "ACE_fieldDressing";};
 				};
 		};
-
-	default
+		
+	case "I_pilot_F": //Crew - Commander
 		{
-			player forceAddUniform "U_B_CTRG_2";
-			player addVest "V_Chestrig_blk";
-			player addBackpack "B_AssaultPack_blk";
-			player addHeadgear "H_HelmetCrew_B";
-			player addItem "NVGoggles_OPFOR";
-			
-			player addItem "Toolkit";
-			player addMagazines ["30Rnd_65x39_caseless_mag_Tracer",4];
-			player addWeapon "arifle_MXC_Black_F";
-			player addPrimaryWeaponItem "ACE_muzzle_mzls_H";
-			player addMagazines ["11Rnd_45ACP_Mag",2];
-			player addWeapon "hgun_Pistol_heavy_01_F";
-			player addHandgunItem "ACE_muzzle_mzls_smg_01";
-			player addHandgunItem "optic_MRD";
+		player forceAddUniform "U_I_CombatUniform";
+		player addVest "V_BandollierB_oli";
+		player addHeadgear "H_MilCap_dgtl";
+		player addmagazines ["30Rnd_556x45_Stanag_Tracer_Yellow",4];
+		player addWeapon "arifle_Mk20C_F";
+		player addPrimaryWeaponItem "optic_ACO_grn";
+		if (paramsArray select 4 == 1) then {
+				player linkItem "itemAndroid";	
+			};
 		};
+
+	case "I_crew_F": //Crew - Gunner
+		{
+			player addWeapon "arifle_Mk20C_F";
+			player addVest "V_TacVest_camo";
+		};
+	
+	case "I_Soldier_repair_F": //Crew - Driver / repairman
+		{
+			player addWeapon "arifle_Mk20C_F";
+			player addPrimaryWeaponItem "optic_ACO_grn";
+			player addVest "V_TacVest_oli";
+			player addHeadgear "H_HelmetCrew_I";
+			player addItem "Toolkit";
+			player addItem "ACE_EntrenchingTool";
+		};
+		
+	case "I_officer_F": //Commander
+		{
+			removebackpack player;
+			player addBackpack "TFAR_anprc155";
+			if (paramsArray select 4 == 1) then {
+				player linkItem "ItemcTab";	
+			};
+		};	
+	
+	case "I_soldier_UAV_F": //Command UAV
+		{
+			removebackpack player;
+			player addBackpack "I_UAV_01_backpack_F";
+			player linkItem "I_UavTerminal";
+			if (paramsArray select 4 == 1) then {
+				player addItem "ItemAndroid";	
+			};			
+		};
+		case "I_helipilot_F": //Helo crew
+		{
+			removebackpack player;
+			player addBackpack "TFAR_anprc155";
+			player addmagazines ["30Rnd_556x45_Stanag_Tracer_Yellow",4];
+			player addWeapon "arifle_Mk20C_F";
+			player addPrimaryWeaponItem "optic_ACO_grn";
+			if (paramsArray select 4 == 1) then {
+				player linkItem "ItemAndroid";	
+			};			
+		};
+		
 };
+
+
+//If the player has a stanag loaded, make it a tracer mag
+if (primaryWeaponMagazine player select 0 == "30Rnd_556x45_Stanag") then {
+	player addPrimaryWeaponItem "30Rnd_556x45_Stanag_Tracer_Yellow";
+};
+
+//Replace all normal stanags with tracer stanags
+{ if (_x == "30Rnd_556x45_Stanag") then {
+	player removemagazine _x; 
+	player addmagazine "30Rnd_556x45_Stanag_Tracer_Yellow"
+	}; 
+} foreach magazines player;
+
+//replace loaded belts with tracer belts
+if (primaryWeaponMagazine player select 0 == "200Rnd_65x39_cased_Box") then {
+	player addPrimaryWeaponItem "200Rnd_65x39_cased_Box_Tracer";
+};
+
+//Replace all normal belts with tracer belts
+{ if (_x == "200Rnd_65x39_cased_Box") then {
+	player removemagazine _x; 
+	player addmagazine "200Rnd_65x39_cased_Box_Tracer"
+	}; 
+} foreach magazines player;
 
 switch (player getVariable "Role") do {
 	case "Commander": 
@@ -233,9 +276,9 @@ if ( ace_medical_level == 2) then
 				for "_i" from 1 to 2 do {player addItem "ACE_morphine";};
 				for "_i" from 1 to 1 do {player addItem "ACE_epinephrine";};
 				for "_i" from 1 to 2 do {player addItem "ACE_fieldDressing";};
-				for "_i" from 1 to 4 do {player addItem "ACE_elasticBandage";};
-				for "_i" from 1 to 6 do {player addItem "ACE_packingBandage";};
-				for "_i" from 1 to 4 do {player addItem "ACE_tourniquet";};
+				for "_i" from 1 to 6 do {player addItem "ACE_elasticBandage";};
+				for "_i" from 1 to 4 do {player addItem "ACE_packingBandage";};
+				for "_i" from 1 to 2 do {player addItem "ACE_tourniquet";};
 				player additem "ACE_bloodIV_250";
 			}
 			else
@@ -266,14 +309,14 @@ if ((player getVariable "Channel") != 4) then {
 	{
 		[ player, "snx_ins_SupportSquad"] call BIS_fnc_setUnitInsignia; 
 		[player, "snx_ins_SupportSquad"] remoteExec ["BIS_fnc_setUnitInsignia", 0, true];
-	};*/
+	};
 	
 player addMPEventHandler ["MPKilled", 
 {
 	_kill = (_this select 0);
 	hint "You have died. You will have to wait out the respawn timer unless a medic revives you with the Lazarus Touch."
 	//Switch unit in condition to desired respawn unit
-	_kill addAction ["Combat Life Save", "resurrect.sqf", nil, 6, false, true, "", "typeof _this == 'B_medic_F'", 2];
+	_kill addAction ["Combat Life Save", "resurrect.sqf", nil, 6, false, true, "", "typeof _this == 'I_medic_F'", 2];
 }];
 
 player addMPEventHandler ["MPRespawn",

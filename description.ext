@@ -32,15 +32,23 @@ class Params
 {
     class ace_medical_level
     {
-        title = "ACE3 Medical Level (Default: Basic)";
+        title = "ACE3 - Medical Level (Default: Advanced)";
         ACE_setting = 1;
         values[] = {1,2};
         texts[] = {"Basic", "Advanced"};
-        default = 1;
+        default = 2;
     };
     class ace_medical_enableRevive
     {
-        title = "Enable ACE3 Revive (Default: Yes)";
+        title = "ACE3 - Revive enabled? (Default: No)";
+        ACE_setting = 1;
+        values[] = {0,1};
+        texts[] = {"No", "Yes"};
+        default = 0;
+    };
+	class ace_medical_preventInstaDeath
+    {
+        title = "ACE3 - Prevent instant death? (Default: Yes)";
         ACE_setting = 1;
         values[] = {0,1};
         texts[] = {"No", "Yes"};
@@ -48,10 +56,18 @@ class Params
     };
 	class ace_medical_playerDamageThreshold
     {
-        title = "ACE3 health modifier (Default: 100%)";
+        title = "ACE3 - player health modifier (Default: 100%)";
         ACE_setting = 1;
-        values[] = {1,2,3};
-        texts[] = {"100%", "200%", "300%"};
+        values[] = {1,1.5,2,3};
+        texts[] = {"100%", "150%", "200%", "300%"};
+        default = 1;
+    };
+	class snx_ctab_toggle
+    {
+        title = "SNX - Enable cTab? (Default: Enable)";
+        ACE_setting = 0;
+        values[] = {0,1};
+        texts[] = {"Disable", "Enable"};
         default = 1;
     };
 };
@@ -81,9 +97,9 @@ class cfgDebriefing
 	{
 		title = "Mission Completed!";
 		subtitle = "You did it!";
-		description = "yeah you beat this mofukkin mission boi";
+		description = "Wait, weren't NATO forces our allies?";
 		pictureBackground = "images\end1.jpg";
-		picture = "B_INFANTRY";
+		picture = "n_mech_inf";
 		pictureColor[] = {0.1,0.1,0.8,1};
 	};
 

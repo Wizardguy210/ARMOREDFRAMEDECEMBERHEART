@@ -9,7 +9,7 @@ switch (_mode) do
 	_settingsSRW = ["100", "110", "120", "130", "140", "150", "160", "50"];	
 	_settingsLRW = ["50", "51", "52", "53", "54", "55", "56", "57", "58"];
 		
-	tf_west_radio_code = "_west";
+	tf_west_radio_code = "fug";
 	TFAR_defaultFrequencies_sr_west = _settingsSRW;
 	TFAR_defaultFrequencies_lr_west = _settingsLRW;
 		
@@ -17,7 +17,7 @@ switch (_mode) do
 	_settingsSRE = ["200", "210", "220", "230", "240", "250", "260", "60"];
 	_settingsLRE = ["60", "61", "62", "63", "64", "65", "66", "67", "68"];
 		
-	tf_east_radio_code = "_east";
+	tf_east_radio_code = "fug";
 	TFAR_defaultFrequencies_sr_east = _settingsSRE;
 	TFAR_defaultFrequencies_lr_east = _settingsLRE;
 		
@@ -25,7 +25,7 @@ switch (_mode) do
 	_settingsSRI = ["300", "310", "320", "330", "340", "350", "360", "70"];
 	_settingsLRI = ["70", "71", "72", "73", "74", "75", "76", "77", "78"];
 		
-	tf_guer_radio_code = "_guer";
+	tf_guer_radio_code = "fug";
 	TFAR_defaultFrequencies_sr_guer = _settingsSRI;
 	TFAR_defaultFrequencies_lr_guer = _settingsLRI;
 	TFAR_defaultFrequencies_sr_independed = _settingsSRI;
