@@ -17,7 +17,7 @@ player createDiaryRecord ["Diary", ["Enemy presence", "East sector: Light NATO p
 Reinforced outposts, minor infantry, MRAPs, LSVs and a single CROWS-equipped IFV.<br/>
 <br/>
 West sector: Heavy NATO presence.<br/> 
-Heavily fortified outposts, ATGM killzones, MBTs, autocannon IFVs, LSVs, mortars, numerous infantry.
+Heavily fortified outposts, autonomous HMG and GMG turrets, MBTs, autocannon IFVs, LSVs, mortars, numerous infantry.
 "]];
 //Fancy links!
 player createDiaryRecord ["Diary", ["Signals", "Preset radio channels and frequencies:<br/>
