@@ -1,12 +1,5 @@
 ["Init", []] spawn SNX_fnc_tfarSetup;
 
-//Literally copied from oscillating unident
-//Todo: Briefing
-//Todo: Loadouts
-//Todo: Logical radio channel layout
-//Todo: Add insignias maybe?
-
-
 //Briefing
 player createDiaryRecord ["Diary", ["Mission Overview", "NATO has taken over a large portion of our former outposts in the north-eastern sector of the island. We're going to drive them away.<br/>
 <br/>

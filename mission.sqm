@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=614;
+		nextID=646;
 	};
 	class Camera
 	{
-		pos[]={10661.45,65.784103,22096.662};
-		dir[]={-0.098972946,-0.45164579,0.88669288};
-		up[]={-0.050101738,0.89219743,0.44885927};
-		aside[]={0.99382991,1.3911631e-008,0.11093166};
+		pos[]={10688.68,59.629807,22415.834};
+		dir[]={-0.26617137,-0.38317877,-0.88455904};
+		up[]={-0.11041287,0.92368299,-0.36693269};
+		aside[]={-0.95764357,-7.0483657e-007,0.28816146};
 	};
 };
 binarizationWanted=0;
@@ -15757,6 +15757,7 @@ class Mission
 								};
 							};
 							id=3915;
+							atlOffset=185.97;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -16056,7 +16057,7 @@ class Mission
 								};
 							};
 							id=4017;
-							atlOffset=0.48321533;
+							atlOffset=185.97;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -16185,7 +16186,7 @@ class Mission
 								};
 							};
 							id=4477;
-							atlOffset=0.00048828125;
+							atlOffset=185.97;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -20371,7 +20372,7 @@ class Mission
 								formation="DIAMOND";
 							};
 							id=4740;
-							atlOffset=0.35498047;
+							atlOffset=185.97;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -21178,7 +21179,7 @@ class Mission
 												angles[]={0,5.5642471,0};
 											};
 											side="West";
-											flags=7;
+											flags=3;
 											class Attributes
 											{
 												skill=0.40000001;
@@ -21186,6 +21187,7 @@ class Mission
 											};
 											id=4799;
 											type="B_Soldier_F";
+											atlOffset=9.4812012;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -21259,7 +21261,7 @@ class Mission
 											};
 											showWP="NEVER";
 											id=4800;
-											atlOffset=0.5;
+											atlOffset=9.9812012;
 											class AttachedTo
 											{
 												id=4799;
@@ -23045,7 +23047,7 @@ class Mission
 								};
 							};
 							id=4917;
-							atlOffset=-0.0046691895;
+							atlOffset=185.97;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -23403,7 +23405,7 @@ class Mission
 								class Item3
 								{
 									dataType="Waypoint";
-									position[]={4843.9209,336.38876,21896.318};
+									position[]={4843.436,336.43109,21896.008};
 									type="Hold";
 									expCond="call{false}";
 									class Effects
@@ -23411,7 +23413,7 @@ class Mission
 									};
 									showWP="NEVER";
 									id=5017;
-									atlOffset=1.0080872;
+									atlOffset=0.93960571;
 									class AttachedTo
 									{
 										id=5016;
@@ -23472,7 +23474,7 @@ class Mission
 								};
 							};
 							id=5012;
-							atlOffset=0.50808716;
+							atlOffset=185.97;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -23532,7 +23534,7 @@ class Mission
 							};
 							id=5016;
 							type="B_MBT_01_cannon_F";
-							atlOffset=0.50808716;
+							atlOffset=0.43960571;
 						};
 						class Item24
 						{
@@ -23559,12 +23561,13 @@ class Mission
 								angles[]={0.0046706893,5.9551215,6.2656956};
 							};
 							side="West";
-							flags=6;
+							flags=2;
 							class Attributes
 							{
 							};
 							id=5025;
 							type="B_GMG_01_A_F";
+							atlOffset=7.4315491;
 						};
 						class Item26
 						{
@@ -23572,15 +23575,16 @@ class Mission
 							class PositionInfo
 							{
 								position[]={4862.4897,369.39551,21946.494};
-								angles[]={-0,4.3347497,0};
+								angles[]={0,4.3347497,0};
 							};
 							side="West";
-							flags=6;
+							flags=2;
 							class Attributes
 							{
 							};
 							id=5028;
 							type="B_GMG_01_A_F";
+							atlOffset=7.0502319;
 						};
 						class Item27
 						{
@@ -23600,7 +23604,7 @@ class Mission
 						};
 					};
 					id=4192;
-					atlOffset=14.738251;
+					atlOffset=91.506378;
 				};
 				class Item1
 				{
@@ -26699,13 +26703,13 @@ class Mission
 										angles[]={0.0004886922,1.8523704,0.00090757123};
 									};
 									side="West";
-									flags=6;
+									flags=2;
 									class Attributes
 									{
 									};
 									id=4991;
 									type="B_Soldier_F";
-									atlOffset=0.0010681152;
+									atlOffset=2.1080017;
 								};
 							};
 							class Attributes
@@ -26734,7 +26738,7 @@ class Mission
 								};
 							};
 							id=4500;
-							atlOffset=0.0010681152;
+							atlOffset=185.97;
 						};
 						class Item1
 						{
@@ -27044,6 +27048,7 @@ class Mission
 								};
 							};
 							id=4505;
+							atlOffset=185.97;
 						};
 						class Item3
 						{
@@ -27142,7 +27147,7 @@ class Mission
 								speedMode="LIMITED";
 							};
 							id=4913;
-							atlOffset=0.39703369;
+							atlOffset=185.97;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -27335,14 +27340,14 @@ class Mission
 								angles[]={0.0004886922,1.8523704,0.00090757123};
 							};
 							side="West";
-							flags=6;
+							flags=2;
 							class Attributes
 							{
 								name="objATGMSouth";
 							};
 							id=4990;
 							type="B_HMG_01_high_F";
-							atlOffset=0.0010681152;
+							atlOffset=1.9160156;
 						};
 						class Item9
 						{
@@ -27353,12 +27358,12 @@ class Mission
 								angles[]={0.00048828125,5.0692301,0.0009134906};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 							};
 							id=4993;
 							type="Land_BagFence_Long_F";
+							atlOffset=2.557312;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -27593,7 +27598,7 @@ class Mission
 								class Item3
 								{
 									dataType="Waypoint";
-									position[]={4560.6118,300.92331,21408.336};
+									position[]={4560.5918,300.92395,21408.373};
 									expCond="call{false}";
 									class Effects
 									{
@@ -27601,7 +27606,7 @@ class Mission
 									showWP="NEVER";
 									id=5002;
 									type="Move";
-									atlOffset=0.5;
+									atlOffset=0.49963379;
 									class AttachedTo
 									{
 										id=4998;
@@ -27659,6 +27664,7 @@ class Mission
 								};
 							};
 							id=4997;
+							atlOffset=185.97;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -27717,6 +27723,7 @@ class Mission
 							};
 							id=4998;
 							type="B_MBT_01_TUSK_F";
+							atlOffset=-0.00036621094;
 						};
 						class Item12
 						{
@@ -27817,6 +27824,7 @@ class Mission
 							};
 							id=5047;
 							type="RoadBarrier_F";
+							atlOffset=-0.0086364746;
 						};
 						class Item18
 						{
@@ -27840,7 +27848,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={4512.3838,290.39944,21341.635};
-								angles[]={-0,4.0347967,0.062584557};
+								angles[]={0,4.0347967,0.062584557};
 							};
 							side="Empty";
 							flags=4;
@@ -27857,7 +27865,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={4515.2886,290.54736,21338.443};
-								angles[]={-0,4.1080933,0.0026744273};
+								angles[]={0,4.1080933,0.0026744273};
 							};
 							side="Empty";
 							flags=4;
@@ -27940,12 +27948,13 @@ class Mission
 								angles[]={6.1536102,0.70457172,6.04987};
 							};
 							side="West";
-							flags=6;
+							flags=2;
 							class Attributes
 							{
 							};
 							id=5037;
 							type="B_HMG_01_A_F";
+							atlOffset=5.5162048;
 						};
 						class Item26
 						{
@@ -27962,10 +27971,11 @@ class Mission
 							};
 							id=5040;
 							type="B_GMG_01_A_F";
+							atlOffset=-9.1552734e-005;
 						};
 					};
 					id=4504;
-					atlOffset=-7.4471741;
+					atlOffset=-7.449646;
 				};
 				class Item4
 				{
@@ -31432,7 +31442,7 @@ class Mission
 				};
 			};
 			id=4647;
-			atlOffset=-9.908493;
+			atlOffset=-9.9583588;
 		};
 		class Item10
 		{
@@ -31531,6 +31541,7 @@ class Mission
 							{
 								skill=1;
 								rank="COLONEL";
+								init="call{this setVariable [""Channel"", 6];}";
 								description="Command - Commander@COMMAND CORE";
 								isPlayer=1;
 								isPlayable=1;
@@ -31650,12 +31661,13 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 6];}";
 								description="Command - Medic";
 								isPlayable=1;
 							};
 							id=3079;
 							type="I_medic_F";
-							atlOffset=0.24349594;
+							atlOffset=0.24349689;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -31768,6 +31780,7 @@ class Mission
 							flags=1;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 6];}";
 								description="Command - Recon Specialist";
 								isPlayable=1;
 							};
@@ -31886,6 +31899,7 @@ class Mission
 							flags=1;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 6];}";
 								description="Command - Engineer";
 								isPlayable=1;
 							};
@@ -32193,14 +32207,15 @@ class Mission
 					};
 					id=3155;
 					type="I_Heli_Transport_02_F";
+					atlOffset=-0.0078163147;
 				};
 				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10634.515,9.5636969,22305.932};
-						angles[]={0.086450629,3.518002,0.027993103};
+						position[]={10634.227,9.5411453,22306.115};
+						angles[]={0.086450629,3.570853,0.027993103};
 					};
 					side="Empty";
 					flags=4;
@@ -32209,7 +32224,6 @@ class Mission
 					};
 					id=3162;
 					type="I_MRAP_03_F";
-					atlOffset=-0.0013928413;
 				};
 				class Item8
 				{
@@ -32275,6 +32289,7 @@ class Mission
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="call{this setVariable [""Channel"", 0];}";
 								description="Alpha - Squad leader@ALPHA";
 								isPlayable=1;
 							};
@@ -32393,6 +32408,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 0];}";
 								description="Alpha - Team Leader";
 								isPlayable=1;
 							};
@@ -32510,6 +32526,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 0];}";
 								description="Alpha - Autorifleman";
 								isPlayable=1;
 							};
@@ -32626,6 +32643,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 0];}";
 								description="Alpha - Medic";
 								isPlayable=1;
 							};
@@ -32744,6 +32762,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 0];}";
 								description="Alpha - Team Leader";
 								isPlayable=1;
 							};
@@ -32860,6 +32879,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 0];}";
 								description="Alpha - Rifleman (AT)";
 								isPlayable=1;
 							};
@@ -32976,6 +32996,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 0];}";
 								description="Alpha - Grenadier";
 								isPlayable=1;
 							};
@@ -33151,6 +33172,7 @@ class Mission
 							class Attributes
 							{
 								rank="LIEUTENANT";
+								init="call{this setVariable [""Channel"", 0];}";
 								description="Alpha Heart - Commander@ALPHA HEART (IFV)";
 								isPlayable=1;
 							};
@@ -33270,6 +33292,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 0];}";
 								description="Alpha Heart - Gunner";
 								isPlayable=1;
 							};
@@ -33388,6 +33411,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 0];}";
 								description="Alpha Heart - Driver";
 								isPlayable=1;
 							};
@@ -33497,6 +33521,7 @@ class Mission
 					};
 					class Attributes
 					{
+						init="call{this setVariable [""Channel"", 0];}";
 					};
 					id=3701;
 					atlOffset=-0.031000137;
@@ -33562,6 +33587,7 @@ class Mission
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="call{this setVariable [""Channel"", 1];}";
 								description="Bravo - Squad Leader@BRAVO";
 								isPlayable=1;
 							};
@@ -33680,6 +33706,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 1];}";
 								description="Bravo - Team Leader";
 								isPlayable=1;
 							};
@@ -33778,6 +33805,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 1];}";
 								description="Bravo - Autorifleman";
 								isPlayable=1;
 							};
@@ -33875,6 +33903,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 1];}";
 								description="Bravo - Medic";
 								isPlayable=1;
 							};
@@ -33974,6 +34003,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 1];}";
 								description="Bravo - Team Leader";
 								isPlayable=1;
 							};
@@ -34072,6 +34102,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 1];}";
 								description="Bravo - Rifleman (AT)";
 								isPlayable=1;
 							};
@@ -34170,6 +34201,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 1];}";
 								description="Bravo - Grenadier";
 								isPlayable=1;
 							};
@@ -34326,6 +34358,7 @@ class Mission
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="call{this setVariable [""Channel"", 1];}";
 								description="Bravo Heart - Commander@BRAVO HEART (IFV)";
 								isPlayable=1;
 							};
@@ -34426,6 +34459,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 1];}";
 								description="Bravo Heart - Gunner";
 								isPlayable=1;
 							};
@@ -34525,6 +34559,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 1];}";
 								description="Bravo Heart - Driver";
 								isPlayable=1;
 							};
@@ -34680,6 +34715,7 @@ class Mission
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="call{this setVariable [""Channel"", 2];}";
 								description="Charlie - Squad Leader@CHARLIE";
 								isPlayable=1;
 							};
@@ -34779,6 +34815,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 2];}";
 								description="Charlie - Team Leader";
 								isPlayable=1;
 							};
@@ -34877,6 +34914,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 2];}";
 								description="Charlie - Autorifleman";
 								isPlayable=1;
 							};
@@ -34975,6 +35013,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 2];}";
 								description="Charlie - Medic";
 								isPlayable=1;
 							};
@@ -35074,6 +35113,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 2];}";
 								description="Charlie - Team Leader";
 								isPlayable=1;
 							};
@@ -35172,6 +35212,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 2];}";
 								description="Charlie - Rifleman (AT)";
 								isPlayable=1;
 							};
@@ -35270,6 +35311,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 2];}";
 								description="Charlie - Grenadier";
 								isPlayable=1;
 							};
@@ -35426,6 +35468,7 @@ class Mission
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="call{this setVariable [""Channel"", 2];}";
 								description="Charlie Heart - Commander@CHARLIE HEART (IFV)";
 								isPlayable=1;
 							};
@@ -35526,6 +35569,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 2];}";
 								description="Charlie Heart - Gunner";
 								isPlayable=1;
 							};
@@ -35625,6 +35669,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 2];}";
 								description="Charlie Heart - Driver";
 								isPlayable=1;
 							};
@@ -35780,6 +35825,7 @@ class Mission
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="call{this setVariable [""Channel"", 3];}";
 								description="Delta - Squad Leader@DELTA";
 								isPlayable=1;
 							};
@@ -35879,6 +35925,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 3];}";
 								description="Delta - Team Leader";
 								isPlayable=1;
 							};
@@ -35977,6 +36024,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 3];}";
 								description="Delta - Autorifleman";
 								isPlayable=1;
 							};
@@ -36075,6 +36123,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 3];}";
 								description="Delta - Medic";
 								isPlayable=1;
 							};
@@ -36174,6 +36223,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 3];}";
 								description="Delta - Team Leader";
 								isPlayable=1;
 							};
@@ -36272,6 +36322,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 3];}";
 								description="Delta - Rifleman (AT)";
 								isPlayable=1;
 							};
@@ -36370,6 +36421,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 3];}";
 								description="Delta - Grenadier";
 								isPlayable=1;
 							};
@@ -36526,6 +36578,7 @@ class Mission
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="call{this setVariable [""Channel"", 3];}";
 								description="Delta Heart - Commander@DELTA HEART (IFV)";
 								isPlayable=1;
 							};
@@ -36626,6 +36679,7 @@ class Mission
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="call{this setVariable [""Channel"", 3];}";
 								description="Delta Heart - Gunner";
 								isPlayable=1;
 							};
@@ -36725,6 +36779,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
+								init="call{this setVariable [""Channel"", 3];}";
 								description="Delta Heart - Driver";
 								isPlayable=1;
 							};
@@ -36899,6 +36954,7 @@ class Mission
 							class Attributes
 							{
 								rank="LIEUTENANT";
+								init="call{this setVariable [""Channel"", 4];}";
 								description="Mars Frame - Pilot@MARS FRAME (RECON)";
 								isPlayable=1;
 							};
@@ -37018,6 +37074,7 @@ class Mission
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="call{this setVariable [""Channel"", 4];}";
 								description="Mars Frame - Co-Pilot";
 								isPlayable=1;
 							};
@@ -37192,6 +37249,7 @@ class Mission
 							class Attributes
 							{
 								rank="LIEUTENANT";
+								init="call{this setVariable [""Channel"", 4];}";
 								description="Jupiter Frame - Pilot@JUPITER FRAME (LOGISTICS)";
 								isPlayable=1;
 							};
@@ -37310,6 +37368,7 @@ class Mission
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="call{this setVariable [""Channel"", 4];}";
 								description="Jupiter Frame - Co-Pilot";
 								isPlayable=1;
 								stance="Middle";
@@ -37556,6 +37615,7 @@ class Mission
 							};
 							id=3222;
 							type="Land_Cargo_HQ_V2_F";
+							atlOffset=-4.7683716e-007;
 						};
 						class Item3
 						{
@@ -38054,6 +38114,7 @@ class Mission
 							};
 							id=3251;
 							type="Land_Mil_WiredFence_F";
+							atlOffset=9.5367432e-007;
 						};
 						class Item31
 						{
@@ -38071,6 +38132,7 @@ class Mission
 							};
 							id=3252;
 							type="Land_Mil_WiredFence_F";
+							atlOffset=9.5367432e-007;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -38357,7 +38419,7 @@ class Mission
 							};
 							id=4985;
 							type="MapBoard_altis_F";
-							atlOffset=0.68277359;
+							atlOffset=0.6874485;
 						};
 						class Item43
 						{
@@ -38365,15 +38427,15 @@ class Mission
 							class PositionInfo
 							{
 								position[]={10654.251,8.2728825,22329.205};
-								angles[]={-0,5.0355248,0};
+								angles[]={0,5.0355248,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 							};
 							id=4987;
 							type="Land_CampingChair_V2_F";
+							atlOffset=0.93323755;
 						};
 						class Item44
 						{
@@ -38381,19 +38443,19 @@ class Mission
 							class PositionInfo
 							{
 								position[]={10655.309,8.1741486,22329.531};
-								angles[]={-0,3.7154479,0};
+								angles[]={0,3.7154479,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 							};
 							id=4986;
 							type="Land_TableDesk_F";
+							atlOffset=0.97119665;
 						};
 					};
 					id=4181;
-					atlOffset=0.7603364;
+					atlOffset=0.76491976;
 				};
 				class Item23
 				{
@@ -38436,6 +38498,7 @@ class Mission
 					};
 					id=4977;
 					type="I_supplyCrate_F";
+					atlOffset=-0.029359818;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38494,6 +38557,7 @@ class Mission
 					};
 					id=4978;
 					type="I_supplyCrate_F";
+					atlOffset=-0.033279419;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38552,6 +38616,7 @@ class Mission
 					};
 					id=4979;
 					type="I_supplyCrate_F";
+					atlOffset=-0.0083751678;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38610,6 +38675,7 @@ class Mission
 					};
 					id=4980;
 					type="I_supplyCrate_F";
+					atlOffset=-0.013031006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38668,6 +38734,7 @@ class Mission
 					};
 					id=4981;
 					type="I_supplyCrate_F";
+					atlOffset=-0.0095787048;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38726,6 +38793,7 @@ class Mission
 					};
 					id=4982;
 					type="I_supplyCrate_F";
+					atlOffset=-0.010091782;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38771,7 +38839,7 @@ class Mission
 				};
 			};
 			id=4190;
-			atlOffset=-0.026792526;
+			atlOffset=-0.035263062;
 		};
 		class Item11
 		{
@@ -38925,6 +38993,7 @@ class Mission
 				};
 			};
 			id=5024;
+			atlOffset=7.4315491;
 		};
 		class Item14
 		{
@@ -38939,7 +39008,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4862.4878,368.30905,21946.555};
-						angles[]={-0,4.3347497,0};
+						angles[]={0,4.3347497,0};
 					};
 					side="West";
 					flags=6;
@@ -38976,6 +39045,7 @@ class Mission
 				};
 			};
 			id=5027;
+			atlOffset=7.0502319;
 		};
 		class Item15
 		{
@@ -39080,6 +39150,7 @@ class Mission
 				};
 			};
 			id=5036;
+			atlOffset=5.5162048;
 		};
 		class Item17
 		{
@@ -39131,6 +39202,7 @@ class Mission
 				};
 			};
 			id=5039;
+			atlOffset=-9.1552734e-005;
 		};
 	};
 };
