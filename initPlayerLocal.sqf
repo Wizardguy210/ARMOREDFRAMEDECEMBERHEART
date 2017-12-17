@@ -307,7 +307,7 @@ if ((player getVariable "Channel") != 4) then {
 player addMPEventHandler ["MPKilled", 
 {
 	_kill = (_this select 0);
-	hint "You have died. You will have to wait out the respawn timer unless a medic revives you with the Lazarus Touch."
+	hint "You have died. You will have to wait out the respawn timer unless a medic revives you with the Lazarus Touch.";
 	//Switch unit in condition to desired respawn unit
 	_kill addAction ["Combat Life Save", "resurrect.sqf", nil, 6, false, true, "", "typeof _this == 'I_medic_F'", 2];
 }];

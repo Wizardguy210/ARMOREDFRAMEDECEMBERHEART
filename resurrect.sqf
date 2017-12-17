@@ -12,5 +12,5 @@ if ( "ACE_Defibrillator" in items player ) then {
 }
 else
 {
-	player sideChat "No valid power source. I should find a defibrillator."
+	player sideChat "No valid power source. I should find a defibrillator.";
 };

@@ -18,10 +18,10 @@ item13[] = {"Airfield_Captured",4,218,56.158325,52.784088,153.844788,137.633774,
 item14[] = {"true",8,218,67.246490,175.098267,110.695473,207.997925,0.000000,"true"};
 item15[] = {"Complete_task_Recolor_1",2,250,154.296234,149.761383,249.292114,202.539627,0.000000,"Complete task" \n "Recolor flag" \n "Change marker"};
 item16[] = {"SPAAG_destroyed",4,218,106.576263,376.648041,196.576263,426.648041,0.000000,"SPAAG" \n "destroyed"};
-item17[] = {"Setup_Western_Bl",2,4346,-42.286377,405.002991,38.537460,446.189758,0.000000,"Setup" \n "Western Block"};
+item17[] = {"Setup_Western_Bl",2,250,-42.286377,405.002991,38.537460,446.189758,0.000000,"Setup" \n "Western Block"};
 item18[] = {"Eastern_Objectives",4,218,-48.431793,280.614624,54.842255,378.451874,0.100000,"Eastern" \n "Objectives" \n "Completed"};
 item19[] = {"Castle_Cleared",4,218,-181.895508,622.810669,-91.895508,672.810730,0.000000,"Castle" \n "Cleared"};
-item20[] = {"City_Cleared",4,218,78.113731,627.426086,168.113739,677.426086,0.000000,"City" \n "Cleared"};
+item20[] = {"City_Cleared",4,4314,78.113731,627.426086,168.113739,677.426086,0.000000,"City" \n "Cleared"};
 item21[] = {"Western_Objectives",4,218,-54.967964,602.809875,50.417236,697.426819,0.000000,"Western" \n "Objectives" \n "Completed"};
 item22[] = {"complete_task_change",2,250,-315.090363,620.710205,-225.090363,670.710205,0.000000,"complete task" \n "change marker"};
 item23[] = {"true",8,218,-185.855103,550.707764,-140.472015,576.091553,0.000000,"true"};
@@ -62,7 +62,7 @@ link29[] = {25,8};
 link30[] = {26,27};
 link31[] = {27,8};
 globals[] = {0.000000,0,0,0,0,640,480,1,78,6316128,1,-715.321167,622.236511,937.522827,-157.292847,1080,884,1};
-window[] = {2,-1,-1,-1,-1,889,130,1570,130,3,1098};
+window[] = {2,-1,-1,-1,-1,863,104,1544,104,3,1098};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -254,8 +254,8 @@ class FSM
                                         to="complete_task_change";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!_CastleCleared && " \n
-                                         "{ _x distance mrkSkull < 400 } count playableUnits + switchableunits > 0 && " \n
-                                         "{ side _x == west && alive _x} count (allUnits inAreaArray [position mrkSkull, 400,400,0,false]) < 5"/*%FSM</CONDITION""">*/;
+                                         "{ _x distance sklThronos < 400 } count playableUnits + switchableunits > 0 && " \n
+                                         "{ side _x == west && alive _x} count (allUnits inAreaArray [position sklThronos, 400,400,0,false]) < 5"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -267,8 +267,8 @@ class FSM
                                         to="complete_task_change_2";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"!_CityCleared && " \n
-                                         "{ _x distance mrkSkull < 400 } count playableUnits + switchableunits > 0 && " \n
-                                         "{ side _x == west && alive _x} count (allUnits inAreaArray [position mrkSkull, 400,400,0,false]) < 5"/*%FSM</CONDITION""">*/;
+                                         "{ _x distance sklOreokastro < 400 } count playableUnits + switchableunits > 0 && " \n
+                                         "{ side _x == west && alive _x} count (allUnits inAreaArray [position sklOreokastro, 400,400,0,false]) < 5"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
