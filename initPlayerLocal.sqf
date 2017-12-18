@@ -121,31 +121,26 @@ switch (typeOf player) do
 			player addMagazines ["DemoCharge_Remote_Mag",3];
 		};
 		
-	case "I_Soldier_exp_F": //machine gunnnn
+	case "": //machine gunnnn
 		{
-			player addItem "Toolkit";
-			player addItem "Minedetector";
-			player addItem "ACE_defusalKit";
-			player addItem "ACE_clacker";
-			player addItem "ACE_EntrenchingTool";
-			player addMagazines ["DemoCharge_Remote_Mag",3];
 		};
 	
 	case "I_medic_F": //Medic
 		{
 			removebackpack player;
-			player addBackpack "B_TacticalPack_oli";
+			player addBackpack "B_Kitbag_rgr";
 			if ( ace_medical_level == 2) then 
 				{
 					player AddItem "ACE_surgicalKit";
 					player AddItem "ACE_Defibrillator";
-					for "_i" from 1 to 30 do {player addItem "ACE_morphine";};
-					for "_i" from 1 to 15 do {player addItem "ACE_epinephrine";};
-					for "_i" from 1 to 10 do {player addItem "ACE_bloodIV";};
+					for "_i" from 1 to 25 do {player addItem "ACE_morphine";};
+					for "_i" from 1 to 18 do {player addItem "ACE_epinephrine";};
+					for "_i" from 1 to 7 do {player addItem "ACE_bloodIV";};
+					for "_i" from 1 to 10 do {player addItem "ACE_bloodIV_500";};
 					for "_i" from 1 to 20 do {player addItem "ACE_fieldDressing";};
 					for "_i" from 1 to 5 do {player addItem "ACE_tourniquet";};
-					for "_i" from 1 to 30 do {player addItem "ACE_elasticBandage";};
-					for "_i" from 1 to 20 do {player addItem "ACE_packingBandage";};
+					for "_i" from 1 to 60 do {player addItem "ACE_elasticBandage";};
+					for "_i" from 1 to 5 do {player addItem "ACE_quikclot";};
 					for "_i" from 1 to 2 do {player addItem "ACE_personalAidKit";};
 				}
 				else
@@ -244,33 +239,14 @@ if (primaryWeaponMagazine player select 0 == "200Rnd_65x39_cased_Box") then {
 	}; 
 } foreach magazines player;
 
-switch (player getVariable "Role") do {
-	case "Commander": 
-	{ 
-		player assignTeam "YELLOW"; 
-		player addHeadgear "H_MilCap_mcamo";
-	};
-	
-	case "Gunner": 
-	{ 
-		player assignTeam "RED"; 
-	};
-	
-	case "Driver": 
-	{ 
-		player assignTeam "BLUE"; 
-	};
-};
-
-
 //Medical for non-medics
 if ( ace_medical_level == 2) then 
 			{
 				for "_i" from 1 to 2 do {player addItem "ACE_morphine";};
 				for "_i" from 1 to 1 do {player addItem "ACE_epinephrine";};
-				for "_i" from 1 to 2 do {player addItem "ACE_fieldDressing";};
-				for "_i" from 1 to 6 do {player addItem "ACE_elasticBandage";};
-				for "_i" from 1 to 4 do {player addItem "ACE_packingBandage";};
+				for "_i" from 1 to 6 do {player addItem "ACE_fieldDressing";};
+				for "_i" from 1 to 2 do {player addItem "ACE_elasticBandage";};
+				for "_i" from 1 to 6 do {player addItem "ACE_quikclot";};
 				for "_i" from 1 to 2 do {player addItem "ACE_tourniquet";};
 				player additem "ACE_bloodIV_250";
 			}
@@ -293,17 +269,6 @@ player addMagazines ["MiniGrenade",1];
 waitUntil { call TFAR_fnc_haveSWRadio };
 [(call TFAR_fnc_activeSwRadio), (player getVariable["Channel", 0])]  call TFAR_fnc_setSwChannel;
 
-//same as above except for insignias
-if ((player getVariable "Channel") != 4) then {
-		[ player, "snx_ins_SelectionUniversity"] call BIS_fnc_setUnitInsignia; 
-		[player, "snx_ins_SelectionUniversity"] remoteExec ["BIS_fnc_setUnitInsignia", 0, true];
-	}
-	else
-	{
-		[ player, "snx_ins_SupportSquad"] call BIS_fnc_setUnitInsignia; 
-		[player, "snx_ins_SupportSquad"] remoteExec ["BIS_fnc_setUnitInsignia", 0, true];
-	};
-	
 player addMPEventHandler ["MPKilled", 
 {
 	_kill = (_this select 0);
