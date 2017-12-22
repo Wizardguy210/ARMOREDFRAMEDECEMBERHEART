@@ -78,9 +78,16 @@ class CfgFunctions
 	#include "dynaspawn-framework\includes\func_defines.hpp"
 	class SNX
 	{
-		class util
+		class radio
 		{
-			class tfarSetup {};
+			class radioInitFreqAndCode {};
+		};
+	};
+	class XPT
+	{
+		class radio
+		{
+			class radioHandleRespawn {};
 		};
 	};
 };
