@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=774;
+		nextID=806;
 	};
 	class Camera
 	{
@@ -21919,7 +21919,7 @@ class Mission
 												angles[]={0,5.5642471,0};
 											};
 											side="West";
-											flags=3;
+											flags=7;
 											class Attributes
 											{
 												skill=0.40000001;
@@ -21927,7 +21927,6 @@ class Mission
 											};
 											id=4799;
 											type="B_Soldier_F";
-											atlOffset=9.4812012;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -22001,7 +22000,7 @@ class Mission
 											};
 											showWP="NEVER";
 											id=4800;
-											atlOffset=9.9812012;
+											atlOffset=0.5;
 											class AttachedTo
 											{
 												id=4799;
@@ -27448,13 +27447,13 @@ class Mission
 										angles[]={0.0004886922,1.8523704,0.00090757123};
 									};
 									side="West";
-									flags=2;
+									flags=6;
 									class Attributes
 									{
 									};
 									id=4991;
 									type="B_Soldier_F";
-									atlOffset=2.1080017;
+									atlOffset=0.0010681152;
 								};
 							};
 							class Attributes
@@ -28085,14 +28084,14 @@ class Mission
 								angles[]={0.0004886922,1.8523704,0.00090757123};
 							};
 							side="West";
-							flags=2;
+							flags=6;
 							class Attributes
 							{
 								name="objATGMSouth";
 							};
 							id=4990;
 							type="B_HMG_01_high_F";
-							atlOffset=1.9160156;
+							atlOffset=0.0010681152;
 						};
 						class Item9
 						{
@@ -28103,12 +28102,12 @@ class Mission
 								angles[]={0.00048828125,5.0692301,0.0009134906};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 							};
 							id=4993;
 							type="Land_BagFence_Long_F";
-							atlOffset=2.557312;
 							class CustomAttributes
 							{
 								class Attribute0

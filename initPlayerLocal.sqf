@@ -1,10 +1,11 @@
 ["Init", []] spawn SNX_fnc_tfarSetup;
 
 //Briefing
-player createDiaryRecord ["Diary", ["Mission Overview", "NATO has taken over a large portion of our former outposts in the north-eastern sector of the island. We're going to drive them away.<br/>
+player createDiaryRecord ["Diary", ["Mission Overview", "NATO has taken over a large portion of our former outposts in the north-western sector of the island. We're going to drive them away.<br/>
 <br/>
 We've divided this operation into two sectors, East and West. <br/>
-Capture the lightly-guarded eastern sector for supplies, then move onto the western sector."]];
+Capture the lightly-guarded eastern sector for supplies, then move onto the western sector.<br/>
+Please do note that we found out that the IFVs you're using had their ammunition stores emptied out. You've got what's in the breech and that's it."]];
 
 player createDiaryRecord ["Diary", ["Enemy presence", "East sector: Light NATO presence. <br/>
 Reinforced outposts, minor infantry, MRAPs, LSVs and a single CROWS-equipped IFV.<br/>
@@ -12,42 +13,49 @@ Reinforced outposts, minor infantry, MRAPs, LSVs and a single CROWS-equipped IFV
 West sector: Heavy NATO presence.<br/> 
 Heavily fortified outposts, autonomous HMG and GMG turrets, MBTs, autocannon IFVs, LSVs, mortars, numerous infantry.
 "]];
-//Fancy links!
+
+//Signals (radio info)
+//Execute expression="string" lets you add a "link"
+//in this case, one link to set a channel, one to set a frequency
+//use str x because using "s breaks the code
+_click = "click";
+_beep = "beep_target";
 player createDiaryRecord ["Diary", ["Signals", "Preset radio channels and frequencies:<br/>
 <font size=12>Clicking a link will set your channel.</font><br/>
+<font size=12>Clicking on a frequency will set the frequency on your active channel.</font><br/>
 <br/>
-<font color='#ff0000'>SHORT RANGE:<br/></font>
-<execute expression='[(call TFAR_fnc_activeSwRadio), 0]  call TFAR_fnc_setSwChannel;'>
-Alpha, CH1 
-(<font color='#99ff99'>100</font>)
-</execute><br/>
-<execute expression='[(call TFAR_fnc_activeSwRadio), 1]  call TFAR_fnc_setSwChannel;'>
-Bravo, CH2
-(<font color='#99ff99'>110</font>)
-</execute><br/>
-<execute expression='[(call TFAR_fnc_activeSwRadio), 2]  call TFAR_fnc_setSwChannel;'>
-Charlie, CH3
-(<font color='#99ff99'>120</font>)
-</execute><br/>
-<execute expression='[(call TFAR_fnc_activeSwRadio), 3]  call TFAR_fnc_setSwChannel;'>
-Delta, CH4
-(<font color='#99ff99'>130</font>)
-</execute><br/>
-<execute expression='[(call TFAR_fnc_activeSwRadio), 4]  call TFAR_fnc_setSwChannel;'>
-Mars Frame, CH5
-(<font color='#99ff99'>140</font>)
-</execute><br/>
-<execute expression='[(call TFAR_fnc_activeSwRadio), 5]  call TFAR_fnc_setSwChannel;'>
-Jupiter Frame, CH6
-(<font color='#99ff99'>150</font>)
-</execute><br/>
-<execute expression='[(call TFAR_fnc_activeSwRadio), 7]  call TFAR_fnc_setSwChannel;'>
-Command Net, CH8
-(<font color='#99ff99'>50</font>)
-</execute><br/>
+<font color='#ff0000'>SHORT RANGE:<br/></font><font color='#ffffff'>
+<execute expression='[(call TFAR_fnc_activeSwRadio), 0]  call TFAR_fnc_setSwChannel; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>
+Alpha, CH1 </execute>
+(<font color='#99ff99'><execute expression='str 100 call TFAR_fnc_setPersonalRadioFrequency; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>100</font><font color='#ffffff'></execute>)
 <br/>
-<font color='#3366ff'>LONG RANGE:<br/></font>
-Command Net, CH1 (<font color='#99ff99'>50</font>)
+<execute expression='[(call TFAR_fnc_activeSwRadio), 1]  call TFAR_fnc_setSwChannel; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>
+Bravo, CH2 </execute>
+(<font color='#99ff99'><execute expression='str 110 call TFAR_fnc_setPersonalRadioFrequency; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>110</font><font color='#ffffff'></execute>)
+<br/>
+<execute expression='[(call TFAR_fnc_activeSwRadio), 2]  call TFAR_fnc_setSwChannel; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>
+Charlie, CH3 </execute>
+(<font color='#99ff99'><execute expression='str 120 call TFAR_fnc_setPersonalRadioFrequency; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>120</font><font color='#ffffff'></execute>)
+<br/>
+<execute expression='[(call TFAR_fnc_activeSwRadio), 3]  call TFAR_fnc_setSwChannel; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>
+Delta, CH4 </execute>
+(<font color='#99ff99'><execute expression='str 130 call TFAR_fnc_setPersonalRadioFrequency; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>130</font><font color='#ffffff'></execute>)
+<br/>
+<execute expression='[(call TFAR_fnc_activeSwRadio), 4]  call TFAR_fnc_setSwChannel; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>
+Mars Frame, CH5 </execute>
+(<font color='#99ff99'><execute expression='str 140 call TFAR_fnc_setPersonalRadioFrequency; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>140</font><font color='#ffffff'></execute>)
+<br/>
+<execute expression='[(call TFAR_fnc_activeSwRadio), 5]  call TFAR_fnc_setSwChannel; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>
+Jupiter Frame, CH6 </execute>
+(<font color='#99ff99'><execute expression='str 150 call TFAR_fnc_setPersonalRadioFrequency; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>150</font><font color='#ffffff'></execute>)
+<br/>
+<execute expression='[(call TFAR_fnc_activeSwRadio), 7]  call TFAR_fnc_setSwChannel; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>
+Command Net, CH8 </execute>
+(<font color='#99ff99'><execute expression='str 100 call TFAR_fnc_setPersonalRadioFrequency; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>50</font><font color='#ffffff'></execute>)
+<br/>
+<br/>
+<font color='#3366ff'>LONG RANGE:<br/></font><font color='#ffffff'>
+Command Net, CH1 (<font color='#99ff99'><execute expression='str 50 call TFAR_fnc_setLongRangeRadioFrequency; [(call TFAR_fnc_activeLrRadio), true] call TFAR_fnc_ShowRadioInfo;'>50</font></execute>)</execute>
 "]];
 
 player createDiaryRecord ["Diary", ["Assets", "You have at your disposal:<br/>
@@ -121,7 +129,7 @@ switch (typeOf player) do
 			player addMagazines ["DemoCharge_Remote_Mag",3];
 		};
 		
-	case "": //machine gunnnn
+	case "I_Soldier_AR_F": //machine gunnnn
 		{
 		};
 	
@@ -266,7 +274,15 @@ player addMagazines ["MiniGrenade",1];
 //Set radio channels based on assigned player variables.
 //Vars are set on the unit in the editor.
 
-waitUntil { call TFAR_fnc_haveSWRadio };
+systemchat "before";
+systemchat str ([player, false, true, 0] call TFAR_fnc_canUseSwRadio);
+systemchat str call TFAR_fnc_activeswRadio;
+waitUntil { call TFAR_fnc_haveSWRadio};
+waitUntil { call TFAR_fnc_activeswRadio call TFAR_fnc_isRadio};
+waitUntil { [player, false, true, 0] call TFAR_fnc_canUseSwRadio;};
+systemchat "after";
+systemchat str call TFAR_fnc_activeswRadio ;
+systemchat str ([player, false, true, 0] call TFAR_fnc_canUseSwRadio);
 [(call TFAR_fnc_activeSwRadio), (player getVariable["Channel", 0])]  call TFAR_fnc_setSwChannel;
 
 player addMPEventHandler ["MPKilled", 
