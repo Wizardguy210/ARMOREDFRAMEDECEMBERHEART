@@ -48,7 +48,7 @@ switch (_mode) do
     [
       call TFAR_fnc_activeSwRadio,
       [
-        0,
+        (player getVariable ["Channel", 0]),
         7,
         (player getVariable ["TFAR_playerFrequencies", missionNamespace getVariable[format["TFAR_defaultFrequencies_sr_%1", str playerSide], TFAR_defaultFrequencies_sr_west]]),
         0,

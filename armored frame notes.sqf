@@ -2,8 +2,6 @@
 give grenadiers grenades
 fix outro images
 important: disable simulation for reinforcements 
-PRESET CHANNELS DIDN'T WORK, FIX THAT SOMEHOW
-long-range channel wasn't set right
 put moving map markers on infantry leads and IFVs
 add group markers for TLs maybe?
 add spare tracks 'n shit to base && IFVs

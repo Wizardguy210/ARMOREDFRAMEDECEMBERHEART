@@ -8,7 +8,7 @@ respawn = 3; //Base respawn
 respawnDialog = 0;
 respawnTemplates[] = {"Spectator","Counter","Wave"};
 respawnOnStart = -1;
-respawnDelay = 150;
+respawnDelay = 1;
 corpseManagerMode = 0; //Don't remove corpses
 enableDebugConsole = 1; //Allow admins to use the debug console
 
@@ -80,7 +80,7 @@ class CfgFunctions
 	{
 		class radio
 		{
-			class radioInitFreqAndCode {};
+			class fucktfr {};
 		};
 	};
 	class XPT

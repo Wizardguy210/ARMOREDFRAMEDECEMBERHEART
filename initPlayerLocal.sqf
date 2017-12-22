@@ -1,4 +1,4 @@
-["Init", []] spawn SNX_fnc_tfarSetup;
+["Init", []] spawn SNX_fnc_fucktfr;
 
 //Briefing
 player createDiaryRecord ["Diary", ["Mission Overview", "NATO has taken over a large portion of our former outposts in the north-western sector of the island. We're going to drive them away.<br/>
@@ -17,9 +17,7 @@ Heavily fortified outposts, autonomous HMG and GMG turrets, MBTs, autocannon IFV
 //Signals (radio info)
 //Execute expression="string" lets you add a "link"
 //in this case, one link to set a channel, one to set a frequency
-//use str x because using "s breaks the code
-_click = "click";
-_beep = "beep_target";
+//use str x because using parentheses breaks the code
 player createDiaryRecord ["Diary", ["Signals", "Preset radio channels and frequencies:<br/>
 <font size=12>Clicking a link will set your channel.</font><br/>
 <font size=12>Clicking on a frequency will set the frequency on your active channel.</font><br/>
@@ -269,21 +267,6 @@ if ( ace_medical_level == 2) then
 
 player addMagazines ["SmokeShell",1];
 player addMagazines ["MiniGrenade",1];
-
-
-//Set radio channels based on assigned player variables.
-//Vars are set on the unit in the editor.
-
-systemchat "before";
-systemchat str ([player, false, true, 0] call TFAR_fnc_canUseSwRadio);
-systemchat str call TFAR_fnc_activeswRadio;
-waitUntil { call TFAR_fnc_haveSWRadio};
-waitUntil { call TFAR_fnc_activeswRadio call TFAR_fnc_isRadio};
-waitUntil { [player, false, true, 0] call TFAR_fnc_canUseSwRadio;};
-systemchat "after";
-systemchat str call TFAR_fnc_activeswRadio ;
-systemchat str ([player, false, true, 0] call TFAR_fnc_canUseSwRadio);
-[(call TFAR_fnc_activeSwRadio), (player getVariable["Channel", 0])]  call TFAR_fnc_setSwChannel;
 
 player addMPEventHandler ["MPKilled", 
 {
