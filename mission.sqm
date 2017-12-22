@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=934;
+		nextID=966;
 	};
 	class Camera
 	{
-		pos[]={9182.9941,89.513817,21539.803};
-		dir[]={0.12319339,-0.63727885,0.76073885};
-		up[]={0.10187353,0.77062827,0.62908858};
-		aside[]={0.98715138,-9.1269612e-008,-0.15985753};
+		pos[]={9138.917,107.13737,21497.824};
+		dir[]={0.7414124,-0.36566567,0.56269234};
+		up[]={0.29128602,0.93074137,0.22107111};
+		aside[]={0.60455966,2.2078166e-007,-0.79657596};
 	};
 };
 binarizationWanted=0;
@@ -21919,7 +21919,7 @@ class Mission
 												angles[]={0,5.5642471,0};
 											};
 											side="West";
-											flags=7;
+											flags=3;
 											class Attributes
 											{
 												skill=0.40000001;
@@ -21927,6 +21927,7 @@ class Mission
 											};
 											id=4799;
 											type="B_Soldier_F";
+											atlOffset=9.4812012;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -22000,7 +22001,7 @@ class Mission
 											};
 											showWP="NEVER";
 											id=4800;
-											atlOffset=0.5;
+											atlOffset=9.9812012;
 											class AttachedTo
 											{
 												id=4799;
@@ -27447,13 +27448,13 @@ class Mission
 										angles[]={0.0004886922,1.8523704,0.00090757123};
 									};
 									side="West";
-									flags=6;
+									flags=2;
 									class Attributes
 									{
 									};
 									id=4991;
 									type="B_Soldier_F";
-									atlOffset=0.0010681152;
+									atlOffset=2.1080017;
 								};
 							};
 							class Attributes
@@ -28084,14 +28085,14 @@ class Mission
 								angles[]={0.0004886922,1.8523704,0.00090757123};
 							};
 							side="West";
-							flags=6;
+							flags=2;
 							class Attributes
 							{
 								name="objATGMSouth";
 							};
 							id=4990;
 							type="B_HMG_01_high_F";
-							atlOffset=0.0010681152;
+							atlOffset=1.9160156;
 						};
 						class Item9
 						{
@@ -28102,12 +28103,12 @@ class Mission
 								angles[]={0.00048828125,5.0692301,0.0009134906};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 							};
 							id=4993;
 							type="Land_BagFence_Long_F";
+							atlOffset=2.557312;
 							class CustomAttributes
 							{
 								class Attribute0

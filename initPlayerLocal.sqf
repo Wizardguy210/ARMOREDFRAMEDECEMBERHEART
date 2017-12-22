@@ -47,13 +47,24 @@ Mars Frame, CH5 </execute>
 Jupiter Frame, CH6 </execute>
 (<font color='#99ff99'><execute expression='str 150 call TFAR_fnc_setPersonalRadioFrequency; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>150</font><font color='#ffffff'></execute>)
 <br/>
+<execute expression='[(call TFAR_fnc_activeSwRadio), 6]  call TFAR_fnc_setSwChannel; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>
+Command, CH7 </execute>
+(<font color='#99ff99'><execute expression='str 160 call TFAR_fnc_setPersonalRadioFrequency; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>160</font><font color='#ffffff'></execute>)
 <execute expression='[(call TFAR_fnc_activeSwRadio), 7]  call TFAR_fnc_setSwChannel; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>
 Command Net, CH8 </execute>
-(<font color='#99ff99'><execute expression='str 100 call TFAR_fnc_setPersonalRadioFrequency; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>50</font><font color='#ffffff'></execute>)
+(<font color='#99ff99'><execute expression='str 50 call TFAR_fnc_setPersonalRadioFrequency; [(call TFAR_fnc_activeSwRadio), false] call TFAR_fnc_ShowRadioInfo;'>50</font><font color='#ffffff'></execute>)
 <br/>
 <br/>
 <font color='#3366ff'>LONG RANGE:<br/></font><font color='#ffffff'>
-Command Net, CH1 (<font color='#99ff99'><execute expression='str 50 call TFAR_fnc_setLongRangeRadioFrequency; [(call TFAR_fnc_activeLrRadio), true] call TFAR_fnc_ShowRadioInfo;'>50</font></execute>)</execute>
+<execute expression='[(call TFAR_fnc_activeLrRadio), 0]  call TFAR_fnc_setLrChannel; [(call TFAR_fnc_activeLrRadio), true] call TFAR_fnc_ShowRadioInfo;'>
+General Net, CH1 </execute>
+(<font color='#99ff99'><execute expression='str 50 call TFAR_fnc_setLongRangeRadioFrequency; [(call TFAR_fnc_activeLrRadio), true] call TFAR_fnc_ShowRadioInfo;'>50</font></execute>)</font><font color='#ffffff'><br/>
+<execute expression='[(call TFAR_fnc_activeLrRadio), 1]  call TFAR_fnc_setLrChannel; [(call TFAR_fnc_activeLrRadio), true] call TFAR_fnc_ShowRadioInfo;'>
+Vehicle Inter-communications Net, CH2 </execute>
+(<font color='#99ff99'><execute expression='str 51 call TFAR_fnc_setLongRangeRadioFrequency; [(call TFAR_fnc_activeLrRadio), true] call TFAR_fnc_ShowRadioInfo;'>51</font></execute>)</font><font color='#ffffff'><br/>
+<execute expression='[(call TFAR_fnc_activeLrRadio), 2]  call TFAR_fnc_setLrChannel; [(call TFAR_fnc_activeLrRadio), true] call TFAR_fnc_ShowRadioInfo;'>
+Aircraft inter-communications net, CH3 </execute>
+(<font color='#99ff99'><execute expression='str 52 call TFAR_fnc_setLongRangeRadioFrequency; [(call TFAR_fnc_activeLrRadio), true] call TFAR_fnc_ShowRadioInfo;'>52</font></execute>)</font><font color='#ffffff'><br/>
 "]];
 
 player createDiaryRecord ["Diary", ["Assets", "You have at your disposal:<br/>
