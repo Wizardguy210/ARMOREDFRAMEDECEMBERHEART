@@ -5,7 +5,7 @@ item0[] = {"init",0,250,-40.348846,-149.418610,49.651154,-99.418610,0.000000,"in
 item1[] = {"SERVER_CHECK",4,218,-192.040344,-145.759003,-102.040337,-95.759003,0.000000,"SERVER" \n "CHECK"};
 item2[] = {"fuck_off_client",1,250,-331.799194,-145.967834,-241.799164,-95.967850,0.000000,"fuck off" \n "client"};
 item3[] = {"true",8,218,-12.379395,-94.819038,23.350616,-71.292206,0.000000,"true"};
-item4[] = {"Setup_Eastern_bl",2,250,-42.778839,-60.485168,47.221176,-10.485168,0.000000,"Setup" \n "Eastern block"};
+item4[] = {"Setup_Eastern_bl",2,4346,-42.778839,-60.485168,47.221176,-10.485168,0.000000,"Setup" \n "Eastern block"};
 item5[] = {"Eastern_Objectiv",2,250,-45.256897,103.513313,44.743118,153.513321,0.000000,"Eastern" \n "Objectives"};
 item6[] = {"true",8,218,-48.912117,9.171326,41.087891,59.171326,0.000000,"true"};
 item7[] = {"true",8,218,-18.789665,471.048096,18.813965,497.656921,0.000000,"true"};
@@ -21,7 +21,7 @@ item16[] = {"SPAAG_destroyed",4,218,106.576263,376.648041,196.576263,426.648041,
 item17[] = {"Setup_Western_Bl",2,250,-42.286377,405.002991,38.537460,446.189758,0.000000,"Setup" \n "Western Block"};
 item18[] = {"Eastern_Objectives",4,218,-48.431793,280.614624,54.842255,378.451874,0.100000,"Eastern" \n "Objectives" \n "Completed"};
 item19[] = {"Castle_Cleared",4,218,-181.895508,622.810669,-91.895508,672.810730,0.000000,"Castle" \n "Cleared"};
-item20[] = {"City_Cleared",4,4314,78.113731,627.426086,168.113739,677.426086,0.000000,"City" \n "Cleared"};
+item20[] = {"City_Cleared",4,218,78.113731,627.426086,168.113739,677.426086,0.000000,"City" \n "Cleared"};
 item21[] = {"Western_Objectives",4,218,-54.967964,602.809875,50.417236,697.426819,0.000000,"Western" \n "Objectives" \n "Completed"};
 item22[] = {"complete_task_change",2,250,-315.090363,620.710205,-225.090363,670.710205,0.000000,"complete task" \n "change marker"};
 item23[] = {"true",8,218,-185.855103,550.707764,-140.472015,576.091553,0.000000,"true"};
@@ -62,7 +62,7 @@ link29[] = {25,8};
 link30[] = {26,27};
 link31[] = {27,8};
 globals[] = {0.000000,0,0,0,0,640,480,1,78,6316128,1,-715.321167,622.236511,937.522827,-157.292847,1080,884,1};
-window[] = {2,-1,-1,-1,-1,863,104,1544,104,3,1098};
+window[] = {2,-1,-1,-32000,-32000,915,156,1596,156,3,1098};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -170,7 +170,9 @@ class FSM
                          "		_x addItemCargoGlobal [""ACE_epinephrine"",50];   " \n
                          "		_x addItemCargoGlobal [""ACE_bloodIV"",20];   " \n
                          "		} forEach [mpod1, mpod2];" \n
-                         "   };"/*%FSM</STATEINIT""">*/;
+                         "   };" \n
+                         "" \n
+                         "{[""ACE_Track"", _x] call ace_cargo_fnc_loadItem} forEach [Heart_A,Heart_B,Heart_C,Heart_D];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {

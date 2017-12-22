@@ -14,10 +14,10 @@ enableDebugConsole = 1; //Allow admins to use the debug console
 
 //Shown at mission select
 overviewText = "AAF Mechanized platoon takes an airfield, castle and town";
-briefingName = "COOP 48 ARMORED FRAME DECEMBER HEART 30MM/7.62 0.1a";
+briefingName = "COOP 48 ARMORED FRAME DECEMBER HEART 30MM/7.62 0.1b";
 class Header {
 	gameType = COOP;
-	minplayers = 1;
+	minplayers = 13;
 	maxplayers = 48;
 };
 
